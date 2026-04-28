@@ -1,16 +1,19 @@
 #nyalakan api uvicorn serviceapi:app --reload
-
 from fastapi import FastAPI
 from fastapi import HTTPException
 from pydantic import BaseModel
 from sqlalchemy import create_engine,text
 from typing import List
+from dotenv import load_dotenv
+import os
 
-DB_USER ="admin"
-DB_PASS ="admin123"
-DB_HOST ="localhost"
-DB_PORT ="5432"
-DB_NAME ="project_roti"
+load_dotenv()
+
+DB_USER = os.getenv("DB_USER")
+DB_PASS = os.getenv("DB_PASS")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_NAME = os.getenv("DB_NAME")
 
 
 engine = create_engine(f"postgresql+psycopg2://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}")

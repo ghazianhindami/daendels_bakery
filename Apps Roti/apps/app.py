@@ -3,8 +3,9 @@ from urllib import response
 import streamlit as st
 import pandas as pd
 import requests
+import time
 
-st.set_page_config(page_title="Bakery Daendels")
+st.set_page_config(page_title="Bakery Daendels",layout="centered")
 
 st.title("🍞 Bakery Daendels POS")
 
@@ -25,40 +26,47 @@ def login_page():
 
 
     if st.button("Login"):
+        with st.spinner(
+                    "Sedang Login..."
+                ):
+            payload={
+                "employee_id":id_employee
+            }
 
-        payload={
-            "employee_id":id_employee
-        }
-
-        try:
-            response = requests.post(
-                "http://localhost:8000/login",
-                json=payload,
-                timeout=5
-            )
-
-            if response.status_code==200:
-
-                user=response.json()
-                st.write(response.status_code)
-                st.write(response.json())
-
-                st.session_state.logged_in=True
-                st.session_state.user=user["user_id"]
-                st.session_state.full_name=user["username"]
-                st.session_state.role=user["role"]
-                st.session_state.branch_id=user["branch_id"]
-                st.session_state.branch_name=user["branch_name"]
-
-                # st.rerun()
-
-            else:
-                st.error(
-                    "Login gagal"
+            try:
+                response = requests.post(
+                    "http://localhost:8000/login",
+                    json=payload,
+                    timeout=5
                 )
 
-        except Exception as e:
-            st.error(e)
+                if response.status_code==200:
+
+                    user=response.json()
+                    st.write(response.status_code)
+                    st.write(response.json())
+
+                    st.session_state.logged_in=True
+                    st.session_state.user=user["user_id"]
+                    st.session_state.full_name=user["username"]
+                    st.session_state.role=user["role"]
+                    st.session_state.branch_id=user["branch_id"]
+                    st.session_state.branch_name=user["branch_name"]
+
+
+                    st.success(
+                        "Login berhasil")
+                    
+                    time.sleep(2)
+                    st.rerun()
+
+                else:
+                    st.error(
+                        "Login gagal"
+                    )
+
+            except Exception as e:
+                st.error(e)
             # st.error(
             #     "API tidak dapat diakses"
             # )
@@ -70,9 +78,6 @@ def main_app():
     st.write(
         f"Selamat datang, {st.session_state.full_name} ({st.session_state.role})"
     )
-
-    
-
 
     # -------------------------
     # Session Cart
@@ -116,7 +121,7 @@ def main_app():
 
     st.subheader("Nama Branches")
 
-    cabang = st.write(st.session_state.branch_name)
+    st.write(st.session_state.branch_name)
 
 
     # -------------------------
@@ -146,7 +151,7 @@ def main_app():
     subtotal = harga * qty
 
     st.write(
-        f"Subtotal: EUR {subtotal}"
+        f"Subtotal: EUR {subtotal:.2f}"
     )
 
 
@@ -178,27 +183,39 @@ def main_app():
 
     if len(st.session_state.cart) > 0:
 
-        cart_df = pd.DataFrame(
-            st.session_state.cart
-        )
+        for i in range(len(st.session_state.cart)):
 
-        st.dataframe(
-            cart_df[
-                ['produk',
-                'qty',
-                'harga',
-                'subtotal']
-            ]
-        )
+            item = st.session_state.cart[i]
 
-        grand_total = cart_df[
-            "subtotal"
-        ].sum()
+            col1, col2, col3, col4, col5 = st.columns([3, 1, 1, 1, 1])
 
-        st.metric(
-            "Grand Total",
-            f"EUR {grand_total}"
-        )
+            col1.write("Produk")
+            col2.write("Qty")
+            col3.write("Harga")
+            col4.write("Subtotal")
+            col5.write("Action")
+
+            col1.write(item["produk"])
+            col2.write(item["qty"])
+            col3.write(f"EUR {item['harga']:.2f}")
+            col4.write(f"EUR {item['subtotal']:.2f}")
+
+            if col5.button("-", key=f"minus_{i}"):
+
+                if item["qty"] > 1:
+                    st.session_state.cart[i]["qty"] -= 1
+                    st.session_state.cart[i]["subtotal"] = (
+                        st.session_state.cart[i]["qty"] *
+                        st.session_state.cart[i]["harga"]
+                    )
+                else:
+                    st.session_state.cart.pop(i)
+
+                st.rerun()
+
+        grand_total = sum(item["subtotal"] for item in st.session_state.cart)
+
+        st.metric("Grand Total", f"EUR {grand_total:.2f}")
 
 
         # Payment Method

@@ -6,3 +6,4 @@ bakery_daendels_data_done/
 *.pyc
 __pycache__/
 Data asli/
+.env
