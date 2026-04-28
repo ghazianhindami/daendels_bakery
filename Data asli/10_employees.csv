@@ -1,0 +1,497 @@
+employee_id,first_name,last_name,email,phone,date_of_birth,branch_id,position_title,department,position_level,monthly_salary,contract_type,weekly_hours,hire_date,termination_date,is_active,manager_id
+1,Pieter,Kuiper,pieter.kuiper@degoudentarwe.nl,+31 06 68904559,1996-09-09,1,Regiomanager,Management,6,4832.66,Stage,20,2017-10-06,,True,1
+2,Wilhelmina,Jansen,wilhelmina.jansen@degoudentarwe.nl,+31 030 8335875,1977-04-25,1,Verkoopmedewerker (parttime),Verkoop,1,1230.02,Stage,40,2019-09-07,2020-12-23,False,
+3,Luuk,de Haan,luuk.dehaan@degoudentarwe.nl,+31 06 84670762,2001-10-08,1,Bakker,Productie,3,3334.04,Stage,20,2017-12-15,,True,1
+4,Dirk,Kok,dirk.kok@degoudentarwe.nl,+31 010 6302073,1985-02-16,1,Banketbakker,Productie,4,3909.37,Tijdelijk,36,2018-07-12,,True,3
+5,Joost,Dekker,joost.dekker@degoudentarwe.nl,+31 030 1046331,1990-10-09,1,Leerling Bakker,Productie,1,1674.34,Vast,24,2018-06-20,,True,
+6,Lucas,van Leeuwen,lucas.vanleeuwen@degoudentarwe.nl,+31 010 5318437,2001-02-11,1,Leerling Bakker,Productie,1,1736.39,Vast,36,2018-04-26,,True,
+7,Iris,van den Heuvel,iris.vandenheuvel@degoudentarwe.nl,+31 030 8666711,1972-01-10,1,Banketbakker,Productie,4,3089.13,Stage,20,2019-02-03,,True,5
+8,Wilhelmina,de Vries,wilhelmina.devries@degoudentarwe.nl,+31 040 2501619,1966-04-12,1,Magazijnmedewerker,Logistiek,2,2145.70,Stage,24,2018-01-03,,True,
+9,Noah,Jacobs,noah.jacobs@degoudentarwe.nl,+31 030 1211339,2002-02-23,1,Boekhouder,Financien,4,4023.69,Oproep,0,2018-01-30,,True,7
+10,Hilde,de Jong,hilde.dejong@degoudentarwe.nl,+31 06 61181040,1981-06-19,1,Filiaalmanager,Management,5,4336.02,Tijdelijk,36,2018-01-25,,True,6
+11,Wilhelmina,van Beek,wilhelmina.vanbeek@degoudentarwe.nl,+31 020 9960054,1972-07-23,1,HR Medewerker,HR,4,3786.34,Vast,20,2018-09-13,,True,10
+12,Anna,Willems,anna.willems@degoudentarwe.nl,+31 010 8995847,1974-05-11,1,Assistent Bakker,Productie,2,2194.96,Vast,20,2018-09-12,,True,
+13,Sem,de Graaf,sem.degraaf@degoudentarwe.nl,+31 06 96900249,1994-03-26,1,Banketbakker,Productie,4,3950.39,Oproep,0,2017-10-13,2019-11-02,False,12
+14,Noah,Hendriks,noah.hendriks@degoudentarwe.nl,+31 06 72198305,1995-09-17,1,Banketbakker,Productie,4,3597.03,Tijdelijk,32,2018-06-22,,True,9
+15,Hans,Kuiper,hans.kuiper@degoudentarwe.nl,+31 06 33045163,1977-02-03,1,Marketing Medewerker,Marketing,3,2896.16,Stage,16,2018-02-25,,True,13
+16,Willem,Brouwer,willem.brouwer@degoudentarwe.nl,+31 06 16963605,1983-05-24,1,Filiaalmanager,Management,5,4518.41,Oproep,0,2018-03-21,,True,9
+17,Petronella,Bakker,petronella.bakker@degoudentarwe.nl,+31 020 4996599,2003-02-08,1,Magazijnmedewerker,Logistiek,2,1902.80,Oproep,0,2017-10-17,,True,
+18,Julia,Wolters,julia.wolters@degoudentarwe.nl,+31 040 8411128,1974-09-08,1,Schoonmaker,Facilitair,1,1659.53,Oproep,0,2018-03-03,2020-03-03,False,
+19,Esther,van Leeuwen,esther.vanleeuwen@degoudentarwe.nl,+31 040 8727406,1976-04-15,1,Assistent Banketbakker,Productie,2,2329.49,Vast,24,2018-07-24,,True,
+20,Sanne,van der Meer,sanne.vandermeer@degoudentarwe.nl,+31 030 8940966,1977-08-13,1,Filiaalmanager,Management,5,3793.52,Stage,24,2018-11-03,,True,6
+21,Dirk,Peters,dirk.peters@degoudentarwe.nl,+31 06 27158495,1974-12-05,2,Leerling Bakker,Productie,1,1612.21,Vast,16,2018-12-31,,True,
+22,Adriana,de Groot,adriana.degroot@degoudentarwe.nl,+31 010 8425750,1972-07-27,2,Bezorger,Logistiek,2,2287.84,Tijdelijk,32,2018-11-23,,True,
+23,Thomas,Janssen,thomas.janssen@degoudentarwe.nl,+31 020 4641142,1993-02-19,2,HR Medewerker,HR,4,2843.64,Oproep,0,2016-03-30,,True,9
+24,Cornelia,Bakker,cornelia.bakker@degoudentarwe.nl,+31 030 4489957,2003-01-09,2,Assistent Manager,Management,4,3184.77,Tijdelijk,36,2015-08-15,,True,20
+25,Noah,Meijer,noah.meijer@degoudentarwe.nl,+31 040 5177511,1971-06-05,2,Banketbakker,Productie,4,3900.38,Tijdelijk,24,2015-06-11,,True,11
+26,Mila,Vos,mila.vos@degoudentarwe.nl,+31 06 94266299,2004-05-27,2,Magazijnmedewerker,Logistiek,2,2048.20,Tijdelijk,36,2015-10-03,,True,
+27,Ruben,Bos,ruben.bos@degoudentarwe.nl,+31 040 1079311,1997-12-24,2,Verkoopmedewerker,Verkoop,2,1849.58,Oproep,0,2016-03-07,,True,
+28,Tessa,de Jong,tessa.dejong@degoudentarwe.nl,+31 06 37361525,1990-07-17,2,Assistent Banketbakker,Productie,2,2025.45,Tijdelijk,20,2016-04-04,,True,
+29,Jan,van den Heuvel,jan.vandenheuvel@degoudentarwe.nl,+31 010 2141121,1972-05-01,2,HR Medewerker,HR,4,3326.02,Oproep,0,2015-07-14,,True,11
+30,Eva,Klein,eva.klein@degoudentarwe.nl,+31 040 9143543,2001-09-13,2,Leerling Bakker,Productie,1,1855.25,Oproep,0,2016-05-05,,True,
+31,Lars,Bakker,lars.bakker@degoudentarwe.nl,+31 010 9444779,1987-01-11,2,Regiomanager,Management,6,4730.39,Stage,16,2015-06-29,,True,6
+32,Lynn,de Wit,lynn.dewit@degoudentarwe.nl,+31 010 2288772,1988-06-14,2,Assistent Bakker,Productie,2,2129.00,Stage,32,2016-06-25,,True,
+33,Pieter,Visser,pieter.visser@degoudentarwe.nl,+31 040 2506005,2004-04-24,2,Filiaalmanager,Management,5,3569.43,Oproep,0,2018-01-27,,True,30
+34,Sem,Jacobs,sem.jacobs@degoudentarwe.nl,+31 020 6442069,1976-10-26,2,Hoofdbakker,Productie,4,3804.14,Oproep,0,2016-03-16,,True,1
+35,Niels,Mulder,niels.mulder@degoudentarwe.nl,+31 06 27529529,1998-05-13,2,Assistent Manager,Management,4,3270.75,Oproep,0,2015-08-27,,True,18
+36,Julia,van Vliet,julia.vanvliet@degoudentarwe.nl,+31 06 91197688,1980-06-25,2,Bakker,Productie,3,3150.25,Oproep,0,2016-01-04,,True,27
+37,Liam,van Vliet,liam.vanvliet@degoudentarwe.nl,+31 020 5298619,1980-06-06,2,Filiaalmanager,Management,5,3593.97,Vast,32,2018-09-14,,True,28
+38,Sem,de Haan,sem.dehaan@degoudentarwe.nl,+31 020 2772839,1976-09-03,2,Banketbakker,Productie,4,3478.14,Vast,40,2016-02-11,,True,13
+39,Gerard,Jacobs,gerard.jacobs@degoudentarwe.nl,+31 06 42122531,1992-12-18,2,Assistent Manager,Management,4,3343.54,Oproep,0,2016-03-18,,True,26
+40,Sara,Vermeer,sara.vermeer@degoudentarwe.nl,+31 06 66213844,1977-08-23,2,Hoofdbakker,Productie,4,3947.62,Vast,32,2015-10-04,,True,4
+41,Gerard,van Dijk,gerard.vandijk@degoudentarwe.nl,+31 040 7287087,1989-06-13,3,Verkoopmedewerker,Verkoop,2,2112.90,Vast,24,2018-11-02,,True,
+42,Hans,van Leeuwen,hans.vanleeuwen@degoudentarwe.nl,+31 06 89332139,1995-01-07,3,Bakker,Productie,3,3319.34,Stage,16,2018-03-19,,True,33
+43,Lars,de Haan,lars.dehaan@degoudentarwe.nl,+31 06 21625382,1989-05-24,3,Filiaalmanager,Management,5,4219.00,Stage,20,2018-08-08,,True,39
+44,Fenna,Peters,fenna.peters@degoudentarwe.nl,+31 06 23659293,1989-09-09,3,Assistent Manager,Management,4,3664.16,Tijdelijk,36,2018-08-29,,True,8
+45,Niels,Mulder,niels.mulder@degoudentarwe.nl,+31 06 94188449,1967-03-04,3,Bezorger,Logistiek,2,2378.95,Oproep,0,2018-10-22,,True,
+46,Bram,de Graaf,bram.degraaf@degoudentarwe.nl,+31 020 8727997,1981-04-02,3,Verkoopmedewerker (parttime),Verkoop,1,933.75,Oproep,0,2018-09-14,,True,
+47,Roos,Visser,roos.visser@degoudentarwe.nl,+31 06 74601923,1968-06-12,3,Banketbakker,Productie,4,3401.36,Tijdelijk,36,2018-04-30,,True,6
+48,Finn,Peeters,finn.peeters@degoudentarwe.nl,+31 040 1788897,1985-01-04,3,Bakker,Productie,3,3298.26,Stage,24,2018-08-09,,True,15
+49,Finn,Jansen,finn.jansen@degoudentarwe.nl,+31 06 47912863,1977-09-05,4,Assistent Banketbakker,Productie,2,2234.17,Tijdelijk,40,2016-08-10,,True,
+50,Roos,Hermans,roos.hermans@degoudentarwe.nl,+31 040 3349037,2003-02-19,4,Filiaalmanager,Management,5,3823.98,Vast,40,2016-07-04,2020-05-25,False,40
+51,Stijn,Meijer,stijn.meijer@degoudentarwe.nl,+31 06 86955760,2002-08-02,4,Verkoopmedewerker,Verkoop,2,2264.35,Tijdelijk,20,2015-01-12,,True,
+52,Tessa,van Beek,tessa.vanbeek@degoudentarwe.nl,+31 020 4969713,1993-08-02,4,Verkoopmedewerker,Verkoop,2,2022.88,Stage,40,2017-03-16,,True,
+53,Jesse,Smeets,jesse.smeets@degoudentarwe.nl,+31 020 8148487,1988-04-06,4,Marketing Medewerker,Marketing,3,3585.74,Stage,32,2017-04-08,,True,25
+54,Jan,Prins,jan.prins@degoudentarwe.nl,+31 030 6857048,1990-03-08,4,Verkoopmedewerker,Verkoop,2,2170.60,Oproep,0,2017-09-01,,True,
+55,Sophie,Vos,sophie.vos@degoudentarwe.nl,+31 020 8697938,1972-07-08,4,Bezorger,Logistiek,2,2244.32,Vast,24,2017-06-27,,True,
+56,Thomas,Hoekstra,thomas.hoekstra@degoudentarwe.nl,+31 010 5829924,1969-01-02,4,Verkoopmedewerker (parttime),Verkoop,1,969.05,Tijdelijk,24,2015-02-23,,True,
+57,Jesse,van Dijk,jesse.vandijk@degoudentarwe.nl,+31 020 9686170,1974-11-10,4,Assistent Banketbakker,Productie,2,2326.12,Oproep,0,2015-12-13,,True,
+58,Thijs,Kok,thijs.kok@degoudentarwe.nl,+31 06 14893693,2000-07-10,4,Assistent Manager,Management,4,3707.32,Stage,36,2016-08-04,,True,43
+59,Johanna,Janssen,johanna.janssen@degoudentarwe.nl,+31 06 23904276,2000-01-26,4,HR Medewerker,HR,4,3258.75,Oproep,0,2015-07-22,,True,3
+60,Gerard,van der Linden,gerard.vanderlinden@degoudentarwe.nl,+31 020 1758402,1972-03-14,4,HR Medewerker,HR,4,2818.39,Vast,40,2014-03-03,,True,23
+61,Gerard,Hermans,gerard.hermans@degoudentarwe.nl,+31 06 50727181,1979-11-23,4,Assistent Bakker,Productie,2,2057.86,Oproep,0,2018-01-22,,True,
+62,Annemiek,Prins,annemiek.prins@degoudentarwe.nl,+31 040 9802878,1982-01-17,4,Assistent Banketbakker,Productie,2,2145.50,Tijdelijk,32,2019-07-21,2022-09-04,False,
+63,Thomas,Wolters,thomas.wolters@degoudentarwe.nl,+31 010 8983274,1995-11-02,4,Verkoopmedewerker,Verkoop,2,2294.40,Oproep,0,2018-04-06,,True,
+64,Finn,van der Linden,finn.vanderlinden@degoudentarwe.nl,+31 06 95317727,1986-02-25,4,Boekhouder,Financien,4,3778.64,Vast,24,2015-04-26,,True,23
+65,Pieter,Prins,pieter.prins@degoudentarwe.nl,+31 020 2766550,1989-07-20,4,Hoofdbakker,Productie,4,4294.08,Oproep,0,2016-02-27,,True,64
+66,Luuk,Schouten,luuk.schouten@degoudentarwe.nl,+31 020 9421835,1966-08-20,4,Marketing Medewerker,Marketing,3,3216.70,Stage,36,2014-04-02,,True,35
+67,Milan,Hoekstra,milan.hoekstra@degoudentarwe.nl,+31 06 45000869,1974-01-17,4,Schoonmaker,Facilitair,1,1729.22,Vast,32,2016-11-02,,True,
+68,Bram,Wolters,bram.wolters@degoudentarwe.nl,+31 030 4766621,2001-12-18,4,Filiaalmanager,Management,5,4020.26,Tijdelijk,20,2016-12-05,,True,18
+69,Eva,Peeters,eva.peeters@degoudentarwe.nl,+31 06 40894365,2003-12-22,5,Verkoopmedewerker,Verkoop,2,2152.75,Vast,24,2018-04-20,2020-05-21,False,
+70,Yara,Strik,yara.strik@degoudentarwe.nl,+31 06 98166134,1999-04-19,5,Verkoopmedewerker (parttime),Verkoop,1,1136.69,Oproep,0,2015-07-29,,True,
+71,Lars,van den Berg,lars.vandenberg@degoudentarwe.nl,+31 06 58517795,1979-07-07,5,Leerling Bakker,Productie,1,1723.49,Stage,24,2017-08-22,,True,
+72,Lotte,Hendriks,lotte.hendriks@degoudentarwe.nl,+31 06 53226220,1986-01-09,5,Bakker,Productie,3,3235.54,Tijdelijk,20,2019-05-07,,True,27
+73,Greta,Peeters,greta.peeters@degoudentarwe.nl,+31 030 6450357,1968-02-10,5,Boekhouder,Financien,4,4158.91,Tijdelijk,40,2018-12-15,,True,15
+74,Fleur,Jacobs,fleur.jacobs@degoudentarwe.nl,+31 06 59418463,1978-07-10,5,Schoonmaker,Facilitair,1,1705.83,Tijdelijk,16,2017-01-23,,True,
+75,Marieke,Hendriks,marieke.hendriks@degoudentarwe.nl,+31 06 82433479,1980-05-14,5,Magazijnmedewerker,Logistiek,2,2042.03,Stage,36,2016-11-13,,True,
+76,Mila,Hermans,mila.hermans@degoudentarwe.nl,+31 040 5691550,1984-01-10,5,Boekhouder,Financien,4,3269.15,Tijdelijk,16,2018-01-11,,True,44
+77,Iris,Hendriks,iris.hendriks@degoudentarwe.nl,+31 010 6958032,1998-02-15,5,Leerling Bakker,Productie,1,1802.77,Tijdelijk,20,2017-07-21,,True,
+78,Evi,van der Linden,evi.vanderlinden@degoudentarwe.nl,+31 040 3219635,1995-09-14,5,HR Medewerker,HR,4,3708.40,Vast,24,2015-06-17,,True,46
+79,Cornelia,Smeets,cornelia.smeets@degoudentarwe.nl,+31 010 6818996,1998-03-23,5,Leerling Bakker,Productie,1,1658.32,Vast,24,2018-03-10,,True,
+80,Johanna,Groen,johanna.groen@degoudentarwe.nl,+31 06 77283667,1979-10-13,5,Banketbakker,Productie,4,2805.10,Tijdelijk,16,2016-07-17,,True,3
+81,Adriana,Brouwer,adriana.brouwer@degoudentarwe.nl,+31 06 96002142,1978-03-17,5,Leerling Bakker,Productie,1,1712.32,Tijdelijk,32,2018-02-21,,True,
+82,Hendrik,Mulder,hendrik.mulder@degoudentarwe.nl,+31 06 55568061,1979-10-09,5,Assistent Manager,Management,4,3510.78,Oproep,0,2015-10-03,2018-04-16,False,70
+83,Femke,Molenaar,femke.molenaar@degoudentarwe.nl,+31 040 2766206,1970-05-14,5,Assistent Manager,Management,4,3369.84,Tijdelijk,16,2014-07-21,,True,45
+84,Adriana,van Leeuwen,adriana.vanleeuwen@degoudentarwe.nl,+31 040 5114033,1974-07-09,5,Filiaalmanager,Management,5,3621.32,Tijdelijk,16,2015-10-04,,True,25
+85,Lisa,Bos,lisa.bos@degoudentarwe.nl,+31 06 29626336,2002-09-16,5,Assistent Manager,Management,4,3362.59,Stage,20,2017-02-01,2018-11-03,False,17
+86,Sem,Klein,sem.klein@degoudentarwe.nl,+31 06 87780041,1985-12-18,5,Hoofdbakker,Productie,4,4315.44,Stage,40,2014-03-14,2016-03-25,False,34
+87,Femke,Brouwer,femke.brouwer@degoudentarwe.nl,+31 010 7572763,2001-12-18,5,HR Medewerker,HR,4,3137.89,Stage,16,2014-01-13,2014-04-28,False,72
+88,Daan,van der Velden,daan.vandervelden@degoudentarwe.nl,+31 06 22751923,1992-05-04,5,Marketing Medewerker,Marketing,3,3089.11,Stage,20,2019-06-24,,True,70
+89,Thomas,van der Velden,thomas.vandervelden@degoudentarwe.nl,+31 030 6514546,2004-08-18,6,Boekhouder,Financien,4,4089.07,Tijdelijk,40,2016-10-24,,True,22
+90,Thomas,Bos,thomas.bos@degoudentarwe.nl,+31 040 9241317,1988-03-24,6,Bezorger,Logistiek,2,1997.74,Vast,20,2014-09-14,,True,
+91,Kees,Bakker,kees.bakker@degoudentarwe.nl,+31 030 4293189,1971-01-04,6,Leerling Bakker,Productie,1,1880.75,Tijdelijk,32,2014-07-25,,True,
+92,Fenna,Hoekstra,fenna.hoekstra@degoudentarwe.nl,+31 06 17783496,1973-04-01,6,Bakker,Productie,3,3257.90,Stage,32,2015-03-05,,True,46
+93,Max,de Groot,max.degroot@degoudentarwe.nl,+31 040 2109868,1969-12-19,6,Bakker,Productie,3,3001.75,Oproep,0,2016-01-28,,True,14
+94,Adriana,Molenaar,adriana.molenaar@degoudentarwe.nl,+31 040 3759831,1995-08-25,6,Marketing Medewerker,Marketing,3,2894.21,Oproep,0,2014-01-13,2018-01-11,False,90
+95,Evi,Vermeer,evi.vermeer@degoudentarwe.nl,+31 06 25487673,1993-03-25,6,Assistent Bakker,Productie,2,2155.30,Tijdelijk,20,2017-05-20,,True,
+96,Greta,de Jong,greta.dejong@degoudentarwe.nl,+31 040 2937127,1997-12-10,6,Assistent Manager,Management,4,3647.03,Tijdelijk,20,2016-12-02,,True,89
+97,Lucas,Janssen,lucas.janssen@degoudentarwe.nl,+31 040 4002969,1997-10-17,6,Bakker,Productie,3,2994.65,Tijdelijk,40,2017-10-14,,True,17
+98,Noa,van Dijk,noa.vandijk@degoudentarwe.nl,+31 010 6518687,1983-06-27,6,Boekhouder,Financien,4,3551.73,Vast,36,2014-11-09,,True,63
+99,Lynn,Hoekstra,lynn.hoekstra@degoudentarwe.nl,+31 010 9358054,1991-12-19,6,Bezorger,Logistiek,2,1947.17,Vast,24,2018-06-04,,True,
+100,Noah,Peters,noah.peters@degoudentarwe.nl,+31 06 28546580,1982-08-27,6,Banketbakker,Productie,4,3333.44,Vast,36,2015-08-12,2015-09-12,False,51
+101,Greta,de Haan,greta.dehaan@degoudentarwe.nl,+31 040 6766872,1996-06-16,6,Verkoopmedewerker (parttime),Verkoop,1,1191.11,Vast,32,2016-06-06,2019-09-17,False,
+102,Thomas,de Jong,thomas.dejong@degoudentarwe.nl,+31 06 22766887,2000-10-24,6,Marketing Medewerker,Marketing,3,2648.53,Tijdelijk,32,2018-04-02,,True,28
+103,Fleur,Hermans,fleur.hermans@degoudentarwe.nl,+31 06 70207260,1985-03-20,7,Filiaalmanager,Management,5,4272.47,Stage,16,2017-08-14,2021-01-20,False,43
+104,Anna,Hoekstra,anna.hoekstra@degoudentarwe.nl,+31 020 8340461,1975-03-07,7,Banketbakker,Productie,4,3702.15,Vast,40,2017-08-17,,True,61
+105,Tessa,Visser,tessa.visser@degoudentarwe.nl,+31 06 39215363,1991-12-20,7,Boekhouder,Financien,4,3194.50,Stage,40,2019-07-27,,True,62
+106,Ruben,Smit,ruben.smit@degoudentarwe.nl,+31 06 23868850,2004-10-01,7,HR Medewerker,HR,4,3747.62,Vast,36,2017-08-22,,True,60
+107,Adriana,Kuiper,adriana.kuiper@degoudentarwe.nl,+31 020 3971815,1971-11-16,7,Magazijnmedewerker,Logistiek,2,1878.00,Stage,20,2018-09-23,,True,
+108,Tessa,de Boer,tessa.deboer@degoudentarwe.nl,+31 06 57824320,1989-08-04,7,Bezorger,Logistiek,2,2387.84,Stage,24,2019-03-27,,True,
+109,Wim,van Beek,wim.vanbeek@degoudentarwe.nl,+31 06 52311042,1985-02-26,7,HR Medewerker,HR,4,3440.10,Vast,20,2018-02-19,,True,71
+110,Lotte,Peeters,lotte.peeters@degoudentarwe.nl,+31 040 1429695,1969-02-17,7,Regiomanager,Management,6,4653.73,Vast,40,2017-09-16,,True,42
+111,Wim,van den Berg,wim.vandenberg@degoudentarwe.nl,+31 010 2568307,1998-04-14,7,Assistent Bakker,Productie,2,1821.12,Vast,16,2017-05-08,,True,
+112,Hendrik,Peters,hendrik.peters@degoudentarwe.nl,+31 020 2905471,1989-04-22,7,Marketing Medewerker,Marketing,3,2957.60,Stage,36,2017-06-20,,True,20
+113,Iris,Dekker,iris.dekker@degoudentarwe.nl,+31 010 5038550,1979-10-22,7,Hoofdbakker,Productie,4,3764.16,Stage,32,2017-06-08,,True,77
+114,Lucas,van Vliet,lucas.vanvliet@degoudentarwe.nl,+31 06 67224872,1995-04-17,7,Bakker,Productie,3,2807.16,Stage,16,2017-07-29,,True,71
+115,Ruben,van den Berg,ruben.vandenberg@degoudentarwe.nl,+31 06 58651144,2003-04-19,7,Banketbakker,Productie,4,3335.64,Stage,32,2017-11-17,,True,89
+116,Emma,Meijer,emma.meijer@degoudentarwe.nl,+31 010 1752511,1966-07-10,7,Bakker,Productie,3,3370.65,Stage,20,2017-10-22,,True,38
+117,Charlotte,de Boer,charlotte.deboer@degoudentarwe.nl,+31 040 9330685,1973-09-01,7,Assistent Bakker,Productie,2,1823.90,Tijdelijk,16,2018-04-13,,True,
+118,Sem,Peeters,sem.peeters@degoudentarwe.nl,+31 06 72371089,1972-07-25,7,Assistent Bakker,Productie,2,1856.32,Tijdelijk,40,2017-11-18,,True,
+119,Gerard,Vos,gerard.vos@degoudentarwe.nl,+31 010 9582360,1971-09-04,7,Filiaalmanager,Management,5,3540.08,Stage,16,2018-09-30,,True,37
+120,Noa,Dekker,noa.dekker@degoudentarwe.nl,+31 06 96852744,1984-11-26,7,Assistent Banketbakker,Productie,2,2517.92,Stage,40,2017-04-25,2021-04-06,False,
+121,Ruben,Strik,ruben.strik@degoudentarwe.nl,+31 020 5157614,1984-01-07,7,Assistent Manager,Management,4,3392.22,Oproep,0,2019-02-11,,True,89
+122,Jesse,Hoekstra,jesse.hoekstra@degoudentarwe.nl,+31 040 6418292,1985-12-18,7,Regiomanager,Management,6,4500.41,Vast,20,2017-07-02,2020-06-20,False,98
+123,Niels,van de Ven,niels.vandeven@degoudentarwe.nl,+31 020 6756463,1966-05-06,8,Regiomanager,Management,6,6025.08,Tijdelijk,40,2014-08-04,,True,71
+124,Petronella,Jacobs,petronella.jacobs@degoudentarwe.nl,+31 010 5520479,1983-02-17,8,Marketing Medewerker,Marketing,3,3002.79,Vast,16,2016-06-27,,True,64
+125,Fenna,van Dijk,fenna.vandijk@degoudentarwe.nl,+31 06 89040411,1997-06-21,8,HR Medewerker,HR,4,3387.84,Oproep,0,2018-06-06,,True,25
+126,Joost,Smeets,joost.smeets@degoudentarwe.nl,+31 06 58522689,1988-09-04,8,Verkoopmedewerker (parttime),Verkoop,1,1371.29,Stage,36,2015-11-19,2016-01-01,False,
+127,Jesse,Dekker,jesse.dekker@degoudentarwe.nl,+31 020 4508433,1985-07-08,8,Assistent Banketbakker,Productie,2,2326.44,Tijdelijk,16,2014-07-22,,True,
+128,Daan,Bakker,daan.bakker@degoudentarwe.nl,+31 06 45115535,1982-04-18,8,HR Medewerker,HR,4,2890.94,Vast,24,2018-06-26,,True,6
+129,Wim,Mulder,wim.mulder@degoudentarwe.nl,+31 06 33760535,1965-11-24,8,Magazijnmedewerker,Logistiek,2,2090.22,Stage,32,2016-08-23,,True,
+130,Noa,van der Meer,noa.vandermeer@degoudentarwe.nl,+31 010 2400120,2001-01-08,8,Hoofdbakker,Productie,4,4113.99,Tijdelijk,36,2017-07-26,,True,39
+131,Sophie,Meijer,sophie.meijer@degoudentarwe.nl,+31 06 43764930,1989-11-05,8,HR Medewerker,HR,4,2892.75,Stage,32,2018-08-21,,True,59
+132,Johanna,Peeters,johanna.peeters@degoudentarwe.nl,+31 06 83885424,1989-12-26,8,Verkoopmedewerker,Verkoop,2,1815.04,Vast,32,2015-11-22,,True,
+133,Emma,Bakker,emma.bakker@degoudentarwe.nl,+31 010 9132583,1973-05-12,8,Assistent Bakker,Productie,2,1908.64,Tijdelijk,20,2018-03-25,,True,
+134,Mila,de Haan,mila.dehaan@degoudentarwe.nl,+31 06 54657358,1998-09-14,8,Assistent Manager,Management,4,2877.76,Tijdelijk,40,2017-04-07,,True,15
+135,Finn,Dekker,finn.dekker@degoudentarwe.nl,+31 06 46456819,2001-06-24,8,Filiaalmanager,Management,5,3629.94,Stage,40,2015-10-12,,True,10
+136,Liam,Hoekstra,liam.hoekstra@degoudentarwe.nl,+31 010 4753523,1987-03-05,8,Bezorger,Logistiek,2,2104.89,Stage,36,2018-05-03,,True,
+137,Joost,Vos,joost.vos@degoudentarwe.nl,+31 06 63348872,1966-11-18,9,Magazijnmedewerker,Logistiek,2,2078.17,Oproep,0,2016-09-24,,True,
+138,Sophie,de Vries,sophie.devries@degoudentarwe.nl,+31 06 73573298,1992-05-23,9,Leerling Bakker,Productie,1,1795.38,Stage,16,2017-04-03,,True,
+139,Jan,van Vliet,jan.vanvliet@degoudentarwe.nl,+31 06 31018672,1976-06-04,9,Bakker,Productie,3,2640.38,Stage,16,2016-08-07,,True,103
+140,Milan,Peters,milan.peters@degoudentarwe.nl,+31 030 7416166,1972-07-10,9,Schoonmaker,Facilitair,1,1668.34,Tijdelijk,16,2015-09-23,,True,
+141,Noah,van Vliet,noah.vanvliet@degoudentarwe.nl,+31 06 79459057,1974-01-07,9,HR Medewerker,HR,4,2839.62,Tijdelijk,16,2016-08-21,,True,99
+142,Kees,Strik,kees.strik@degoudentarwe.nl,+31 030 5248297,1973-09-05,9,Filiaalmanager,Management,5,3566.99,Oproep,0,2014-12-20,,True,37
+143,Sara,Strik,sara.strik@degoudentarwe.nl,+31 030 2372514,1981-07-27,9,Verkoopmedewerker (parttime),Verkoop,1,1346.53,Oproep,0,2015-06-29,,True,
+144,Lotte,Hendriks,lotte.hendriks@degoudentarwe.nl,+31 020 7679054,1982-07-24,9,Bezorger,Logistiek,2,2128.55,Stage,40,2015-12-14,,True,
+145,Mila,de Graaf,mila.degraaf@degoudentarwe.nl,+31 040 5612743,1975-08-05,9,Assistent Manager,Management,4,3684.09,Stage,16,2015-08-20,,True,94
+146,Lisa,Meijer,lisa.meijer@degoudentarwe.nl,+31 010 2922802,1993-09-08,9,Magazijnmedewerker,Logistiek,2,1889.92,Oproep,0,2015-02-12,2015-12-15,False,
+147,Evi,de Jong,evi.dejong@degoudentarwe.nl,+31 06 28428911,1999-01-12,9,Filiaalmanager,Management,5,4498.03,Tijdelijk,36,2018-03-02,,True,69
+148,Milan,de Graaf,milan.degraaf@degoudentarwe.nl,+31 030 8726050,1988-02-10,9,Schoonmaker,Facilitair,1,1817.33,Oproep,0,2018-06-14,,True,
+149,Levi,Peeters,levi.peeters@degoudentarwe.nl,+31 020 1656618,1969-09-08,9,Regiomanager,Management,6,5599.60,Tijdelijk,20,2017-10-09,,True,139
+150,Charlotte,van de Ven,charlotte.vandeven@degoudentarwe.nl,+31 06 74810337,1995-10-15,9,Schoonmaker,Facilitair,1,1682.64,Oproep,0,2015-02-22,,True,
+151,Sanne,van de Ven,sanne.vandeven@degoudentarwe.nl,+31 040 3544708,1977-01-16,9,Marketing Medewerker,Marketing,3,3410.01,Vast,32,2016-04-01,2017-02-05,False,12
+152,Willem,de Boer,willem.deboer@degoudentarwe.nl,+31 06 50214518,1996-03-16,9,Verkoopmedewerker (parttime),Verkoop,1,1225.15,Oproep,0,2014-05-09,,True,
+153,Adriana,de Wit,adriana.dewit@degoudentarwe.nl,+31 030 5910879,1986-11-10,9,Verkoopmedewerker (parttime),Verkoop,1,1081.72,Tijdelijk,20,2018-10-13,,True,
+154,Levi,Jansen,levi.jansen@degoudentarwe.nl,+31 040 9978962,1989-10-16,9,Assistent Bakker,Productie,2,1965.89,Oproep,0,2019-02-20,,True,
+155,Finn,van Vliet,finn.vanvliet@degoudentarwe.nl,+31 020 6620817,1983-02-10,9,Banketbakker,Productie,4,3555.21,Tijdelijk,20,2016-03-21,,True,88
+156,Daan,van Leeuwen,daan.vanleeuwen@degoudentarwe.nl,+31 020 3187591,1975-06-04,9,Banketbakker,Productie,4,3574.22,Stage,20,2018-12-16,,True,117
+157,Julia,de Boer,julia.deboer@degoudentarwe.nl,+31 010 1924617,1982-07-09,10,Hoofdbakker,Productie,4,3756.00,Tijdelijk,16,2016-02-06,,True,27
+158,Luuk,Hendriks,luuk.hendriks@degoudentarwe.nl,+31 030 5460689,1972-10-26,10,Boekhouder,Financien,4,3906.50,Tijdelijk,24,2019-03-13,,True,109
+159,Fleur,Kok,fleur.kok@degoudentarwe.nl,+31 020 4665327,1973-03-06,10,Boekhouder,Financien,4,3420.35,Stage,40,2019-06-28,,True,144
+160,Levi,van den Berg,levi.vandenberg@degoudentarwe.nl,+31 06 75702504,1974-08-18,10,Assistent Banketbakker,Productie,2,2266.82,Tijdelijk,20,2016-06-27,,True,
+161,Lieke,Jacobs,lieke.jacobs@degoudentarwe.nl,+31 06 18116684,1968-11-19,10,Banketbakker,Productie,4,2919.78,Tijdelijk,20,2015-07-21,,True,32
+162,Esther,Klein,esther.klein@degoudentarwe.nl,+31 020 5841642,1971-09-10,10,Filiaalmanager,Management,5,4077.38,Oproep,0,2016-09-08,,True,109
+163,Julia,de Graaf,julia.degraaf@degoudentarwe.nl,+31 06 14034217,1981-02-28,10,Assistent Bakker,Productie,2,2113.13,Tijdelijk,36,2017-12-24,,True,
+164,Femke,Bakker,femke.bakker@degoudentarwe.nl,+31 040 7283533,1996-07-25,10,Schoonmaker,Facilitair,1,1858.49,Oproep,0,2017-01-25,,True,
+165,Thijs,Peters,thijs.peters@degoudentarwe.nl,+31 06 77672441,1994-09-25,10,Marketing Medewerker,Marketing,3,3003.08,Vast,20,2019-05-30,,True,127
+166,Max,Peeters,max.peeters@degoudentarwe.nl,+31 010 7484341,1973-01-14,10,Banketbakker,Productie,4,3708.61,Oproep,0,2017-07-10,,True,161
+167,Anna,Vermeer,anna.vermeer@degoudentarwe.nl,+31 06 31642810,1973-12-14,10,Boekhouder,Financien,4,3373.69,Oproep,0,2017-05-23,,True,52
+168,Cornelia,Schouten,cornelia.schouten@degoudentarwe.nl,+31 030 2991989,2003-10-04,10,Assistent Banketbakker,Productie,2,2089.08,Oproep,0,2019-05-08,,True,
+169,Geertruida,Willems,geertruida.willems@degoudentarwe.nl,+31 010 4143310,2003-03-22,10,Hoofdbakker,Productie,4,3380.02,Oproep,0,2017-10-18,,True,113
+170,Lisa,Willems,lisa.willems@degoudentarwe.nl,+31 06 82929906,2004-01-09,10,Banketbakker,Productie,4,3792.76,Stage,32,2018-01-11,,True,135
+171,Finn,Strik,finn.strik@degoudentarwe.nl,+31 030 5344452,1990-08-28,10,Hoofdbakker,Productie,4,4327.28,Tijdelijk,32,2016-01-20,,True,65
+172,Bram,Smit,bram.smit@degoudentarwe.nl,+31 06 96728691,1992-06-15,10,HR Medewerker,HR,4,3665.02,Tijdelijk,24,2015-07-28,,True,83
+173,Dirk,Brouwer,dirk.brouwer@degoudentarwe.nl,+31 06 55017108,1989-03-27,10,Verkoopmedewerker,Verkoop,2,1730.61,Vast,20,2015-05-01,,True,
+174,Greta,de Graaf,greta.degraaf@degoudentarwe.nl,+31 06 36943922,1967-08-06,10,Magazijnmedewerker,Logistiek,2,2247.43,Vast,36,2018-01-22,,True,
+175,Ruben,van der Meer,ruben.vandermeer@degoudentarwe.nl,+31 06 92447492,1968-08-21,10,Assistent Banketbakker,Productie,2,2339.59,Tijdelijk,20,2015-06-09,,True,
+176,Maria,Bakker,maria.bakker@degoudentarwe.nl,+31 06 98613934,1968-04-15,10,Magazijnmedewerker,Logistiek,2,2215.62,Tijdelijk,24,2016-05-26,2019-07-22,False,
+177,Johanna,van Dijk,johanna.vandijk@degoudentarwe.nl,+31 06 44628808,1984-06-15,11,Magazijnmedewerker,Logistiek,2,2188.53,Stage,40,2018-04-17,,True,
+178,Noah,Janssen,noah.janssen@degoudentarwe.nl,+31 020 6188749,1975-03-02,11,Marketing Medewerker,Marketing,3,2907.56,Oproep,0,2016-12-07,,True,4
+179,Wilhelmina,de Jong,wilhelmina.dejong@degoudentarwe.nl,+31 06 58544727,2000-11-13,11,Verkoopmedewerker,Verkoop,2,1725.34,Stage,36,2018-09-28,,True,
+180,Lotte,van de Ven,lotte.vandeven@degoudentarwe.nl,+31 010 8332131,2002-12-12,11,Assistent Bakker,Productie,2,2420.03,Oproep,0,2016-09-23,,True,
+181,Joost,Vos,joost.vos@degoudentarwe.nl,+31 030 9668187,1978-12-05,11,Bezorger,Logistiek,2,2144.39,Oproep,0,2016-07-12,,True,
+182,Noah,Mulder,noah.mulder@degoudentarwe.nl,+31 06 70049651,1972-06-14,11,Bakker,Productie,3,2689.56,Oproep,0,2016-05-21,,True,117
+183,Tim,van der Linden,tim.vanderlinden@degoudentarwe.nl,+31 010 7379921,1990-12-10,11,Hoofdbakker,Productie,4,3966.14,Stage,40,2017-01-04,2017-04-27,False,44
+184,Max,Hermans,max.hermans@degoudentarwe.nl,+31 010 6620207,1999-08-02,11,HR Medewerker,HR,4,3091.36,Tijdelijk,16,2018-08-13,,True,176
+185,Lucas,Peeters,lucas.peeters@degoudentarwe.nl,+31 06 16238904,1999-07-14,11,Regiomanager,Management,6,4941.21,Stage,32,2018-12-07,,True,175
+186,Daan,Strik,daan.strik@degoudentarwe.nl,+31 030 8861955,1999-08-11,11,Hoofdbakker,Productie,4,3336.68,Vast,16,2016-09-10,,True,178
+187,Cornelia,de Vries,cornelia.devries@degoudentarwe.nl,+31 020 3155233,2003-04-14,11,Assistent Bakker,Productie,2,2167.43,Oproep,0,2017-06-02,,True,
+188,Noa,van der Linden,noa.vanderlinden@degoudentarwe.nl,+31 040 5891352,1999-04-19,11,Verkoopmedewerker,Verkoop,2,2125.00,Vast,32,2016-09-09,,True,
+189,Maria,van Dijk,maria.vandijk@degoudentarwe.nl,+31 030 9784035,1972-12-03,11,Banketbakker,Productie,4,3538.50,Oproep,0,2016-12-17,,True,112
+190,Pieter,Strik,pieter.strik@degoudentarwe.nl,+31 06 24271511,1965-09-11,11,Regiomanager,Management,6,4840.60,Vast,24,2017-07-27,,True,147
+191,Lynn,Hermans,lynn.hermans@degoudentarwe.nl,+31 010 3496570,1965-11-02,11,Verkoopmedewerker (parttime),Verkoop,1,977.12,Oproep,0,2018-10-12,,True,
+192,Niels,Jansen,niels.jansen@degoudentarwe.nl,+31 010 3548317,1978-03-13,11,Regiomanager,Management,6,6332.86,Vast,20,2016-09-19,,True,164
+193,Bram,van de Ven,bram.vandeven@degoudentarwe.nl,+31 06 39797107,1996-06-10,11,Banketbakker,Productie,4,3389.39,Oproep,0,2016-09-20,,True,183
+194,Sanne,Dijkstra,sanne.dijkstra@degoudentarwe.nl,+31 040 9223657,1981-03-25,11,Leerling Bakker,Productie,1,1775.95,Oproep,0,2018-07-12,2021-11-04,False,
+195,Tessa,Vos,tessa.vos@degoudentarwe.nl,+31 040 8445956,2002-12-15,11,Hoofdbakker,Productie,4,3284.83,Tijdelijk,36,2016-10-23,,True,63
+196,Finn,Smeets,finn.smeets@degoudentarwe.nl,+31 020 6619197,1991-07-20,11,Assistent Manager,Management,4,3420.95,Tijdelijk,40,2019-05-06,,True,5
+197,Sanne,van den Berg,sanne.vandenberg@degoudentarwe.nl,+31 040 5016255,1971-11-02,12,Assistent Banketbakker,Productie,2,2348.92,Oproep,0,2019-03-13,,True,
+198,Julia,van de Ven,julia.vandeven@degoudentarwe.nl,+31 06 75798016,2003-07-16,12,Boekhouder,Financien,4,3412.08,Vast,40,2015-10-17,,True,9
+199,Yara,Schouten,yara.schouten@degoudentarwe.nl,+31 010 9329508,1974-02-18,12,Verkoopmedewerker (parttime),Verkoop,1,1385.01,Stage,16,2018-07-08,,True,
+200,Lucas,Hermans,lucas.hermans@degoudentarwe.nl,+31 010 5510922,1967-01-08,12,Verkoopmedewerker (parttime),Verkoop,1,1198.24,Vast,32,2017-10-27,,True,
+201,Noah,van der Linden,noah.vanderlinden@degoudentarwe.nl,+31 020 1650134,1984-11-26,12,Marketing Medewerker,Marketing,3,2670.31,Stage,32,2015-02-07,,True,66
+202,Anna,Dekker,anna.dekker@degoudentarwe.nl,+31 020 6460776,1979-04-09,12,Regiomanager,Management,6,5689.27,Oproep,0,2015-07-19,,True,106
+203,Evi,Jansen,evi.jansen@degoudentarwe.nl,+31 020 2329930,1970-10-15,12,Bezorger,Logistiek,2,1836.96,Oproep,0,2017-03-12,,True,
+204,Anna,Peeters,anna.peeters@degoudentarwe.nl,+31 020 7008755,1973-04-05,12,Banketbakker,Productie,4,3680.71,Vast,32,2015-05-05,,True,112
+205,Anna,van Leeuwen,anna.vanleeuwen@degoudentarwe.nl,+31 040 7306552,1987-02-09,13,Regiomanager,Management,6,5568.92,Tijdelijk,20,2015-07-22,2019-07-18,False,194
+206,Thijs,de Groot,thijs.degroot@degoudentarwe.nl,+31 06 45848921,1980-06-05,13,Filiaalmanager,Management,5,4153.96,Tijdelijk,24,2016-01-11,,True,28
+207,Marieke,Dijkstra,marieke.dijkstra@degoudentarwe.nl,+31 010 3487874,1988-09-22,13,Banketbakker,Productie,4,3640.78,Vast,20,2015-08-17,,True,13
+208,Adriana,Willems,adriana.willems@degoudentarwe.nl,+31 06 60117592,1984-06-12,13,Regiomanager,Management,6,5828.02,Vast,36,2015-01-07,,True,143
+209,Sanne,van de Ven,sanne.vandeven@degoudentarwe.nl,+31 040 4849414,1987-08-27,13,Hoofdbakker,Productie,4,3639.68,Stage,20,2019-09-25,,True,14
+210,Willem,Bakker,willem.bakker@degoudentarwe.nl,+31 06 90300475,2004-03-27,13,Hoofdbakker,Productie,4,3418.56,Tijdelijk,16,2018-03-01,,True,101
+211,Liam,Peeters,liam.peeters@degoudentarwe.nl,+31 020 8378480,1996-10-01,13,Boekhouder,Financien,4,4039.45,Oproep,0,2018-04-25,,True,195
+212,Johanna,Vos,johanna.vos@degoudentarwe.nl,+31 06 45106281,1972-06-08,13,Leerling Bakker,Productie,1,1744.24,Tijdelijk,40,2016-07-21,,True,
+213,Emma,Prins,emma.prins@degoudentarwe.nl,+31 030 1275188,1980-07-09,13,Assistent Bakker,Productie,2,1867.51,Vast,32,2018-05-15,2019-10-15,False,
+214,Lars,van Dijk,lars.vandijk@degoudentarwe.nl,+31 06 58256300,1989-01-09,13,Assistent Banketbakker,Productie,2,2202.75,Stage,32,2018-01-28,,True,
+215,Noa,de Jong,noa.dejong@degoudentarwe.nl,+31 020 7408365,1988-06-08,13,Assistent Manager,Management,4,3611.85,Oproep,0,2018-08-08,,True,106
+216,Tim,van den Berg,tim.vandenberg@degoudentarwe.nl,+31 06 53901973,1984-05-12,13,Bakker,Productie,3,3287.60,Stage,16,2015-09-04,,True,147
+217,Sanne,van den Berg,sanne.vandenberg@degoudentarwe.nl,+31 06 63387992,1979-09-01,13,Marketing Medewerker,Marketing,3,2995.90,Stage,40,2018-08-05,,True,85
+218,Bram,de Graaf,bram.degraaf@degoudentarwe.nl,+31 06 52777157,1998-08-07,13,Schoonmaker,Facilitair,1,1757.86,Tijdelijk,32,2014-06-30,,True,
+219,Stijn,van de Ven,stijn.vandeven@degoudentarwe.nl,+31 020 6510795,1977-07-23,13,Assistent Manager,Management,4,3481.74,Tijdelijk,20,2019-08-01,,True,83
+220,Lotte,Smit,lotte.smit@degoudentarwe.nl,+31 040 3224373,1996-04-05,13,Hoofdbakker,Productie,4,3923.07,Vast,20,2015-05-17,,True,213
+221,Roos,Dekker,roos.dekker@degoudentarwe.nl,+31 010 5868443,1999-11-14,13,Boekhouder,Financien,4,3181.39,Oproep,0,2014-05-02,,True,44
+222,Frans,de Haan,frans.dehaan@degoudentarwe.nl,+31 06 80277299,1977-08-27,13,Verkoopmedewerker (parttime),Verkoop,1,1368.01,Vast,16,2018-01-28,,True,
+223,Maria,Janssen,maria.janssen@degoudentarwe.nl,+31 06 58192537,2001-09-02,13,Leerling Bakker,Productie,1,1684.61,Vast,36,2015-07-14,,True,
+224,Liam,Mulder,liam.mulder@degoudentarwe.nl,+31 030 2790616,1996-03-11,13,Regiomanager,Management,6,4579.27,Oproep,0,2017-08-30,2019-05-11,False,146
+225,Sara,van Beek,sara.vanbeek@degoudentarwe.nl,+31 020 1519121,2004-12-19,14,Hoofdbakker,Productie,4,3206.00,Stage,36,2016-04-24,,True,167
+226,Lotte,Hoekstra,lotte.hoekstra@degoudentarwe.nl,+31 030 8520467,1995-06-23,14,Assistent Bakker,Productie,2,2449.39,Stage,40,2018-04-23,2019-06-18,False,
+227,Iris,Mulder,iris.mulder@degoudentarwe.nl,+31 020 1161458,2002-03-26,14,Bakker,Productie,3,2579.53,Stage,36,2015-10-28,,True,177
+228,Esther,Bos,esther.bos@degoudentarwe.nl,+31 010 1591200,1980-05-20,14,Leerling Bakker,Productie,1,1854.47,Oproep,0,2015-07-26,,True,
+229,Milan,Janssen,milan.janssen@degoudentarwe.nl,+31 010 4839238,1971-01-06,14,Schoonmaker,Facilitair,1,1894.98,Tijdelijk,20,2015-03-07,,True,
+230,Johanna,Peters,johanna.peters@degoudentarwe.nl,+31 020 6216473,2002-08-22,14,Assistent Banketbakker,Productie,2,2695.35,Oproep,0,2018-10-01,,True,
+231,Evi,de Graaf,evi.degraaf@degoudentarwe.nl,+31 06 62352896,1987-12-10,14,Magazijnmedewerker,Logistiek,2,1925.69,Tijdelijk,36,2017-08-27,,True,
+232,Niels,Visser,niels.visser@degoudentarwe.nl,+31 010 2948563,1979-11-14,14,Bakker,Productie,3,2879.52,Vast,32,2016-08-22,,True,222
+233,Finn,van den Berg,finn.vandenberg@degoudentarwe.nl,+31 030 6515772,1987-09-02,15,Boekhouder,Financien,4,3450.07,Tijdelijk,40,2016-03-27,,True,83
+234,Johanna,Peeters,johanna.peeters@degoudentarwe.nl,+31 06 22040435,1970-06-01,15,Hoofdbakker,Productie,4,3749.39,Vast,16,2016-01-28,,True,222
+235,Daan,Prins,daan.prins@degoudentarwe.nl,+31 030 3009667,1983-01-11,15,Boekhouder,Financien,4,3321.39,Oproep,0,2017-06-06,,True,165
+236,Lisa,Peeters,lisa.peeters@degoudentarwe.nl,+31 030 2866988,1981-12-06,15,Filiaalmanager,Management,5,3960.57,Stage,20,2016-02-27,,True,63
+237,Frans,Strik,frans.strik@degoudentarwe.nl,+31 06 63215071,1983-03-27,15,Magazijnmedewerker,Logistiek,2,2277.28,Vast,24,2019-08-05,,True,
+238,Sem,de Haan,sem.dehaan@degoudentarwe.nl,+31 040 2570122,1994-02-10,15,Banketbakker,Productie,4,3185.79,Tijdelijk,24,2014-12-21,,True,81
+239,Niels,Strik,niels.strik@degoudentarwe.nl,+31 040 3700816,1972-08-10,15,Hoofdbakker,Productie,4,3284.87,Tijdelijk,20,2017-09-08,,True,116
+240,Jan,van Dijk,jan.vandijk@degoudentarwe.nl,+31 06 50251636,1967-03-28,15,Banketbakker,Productie,4,3103.44,Tijdelijk,24,2015-04-04,,True,11
+241,Pieter,Vermeer,pieter.vermeer@degoudentarwe.nl,+31 06 74898370,1979-08-07,16,Regiomanager,Management,6,4935.59,Tijdelijk,16,2016-10-24,,True,161
+242,Annemiek,de Jong,annemiek.dejong@degoudentarwe.nl,+31 010 6541786,2000-10-02,16,Magazijnmedewerker,Logistiek,2,2007.92,Vast,32,2019-02-23,,True,
+243,Lieke,van de Ven,lieke.vandeven@degoudentarwe.nl,+31 020 1103724,2000-08-05,16,Marketing Medewerker,Marketing,3,2973.25,Stage,36,2019-04-26,,True,110
+244,Adriana,Hoekstra,adriana.hoekstra@degoudentarwe.nl,+31 040 4568822,1988-05-08,16,Leerling Bakker,Productie,1,1736.33,Vast,16,2014-11-07,,True,
+245,Esther,Molenaar,esther.molenaar@degoudentarwe.nl,+31 010 6862707,2004-05-08,16,Filiaalmanager,Management,5,4640.95,Oproep,0,2015-04-11,,True,49
+246,Greta,van Dijk,greta.vandijk@degoudentarwe.nl,+31 010 6673527,1999-07-10,16,Leerling Bakker,Productie,1,1694.34,Oproep,0,2014-11-29,,True,
+247,Thijs,Smeets,thijs.smeets@degoudentarwe.nl,+31 06 78039999,1981-01-13,16,Marketing Medewerker,Marketing,3,2908.94,Oproep,0,2014-02-11,,True,134
+248,Eva,Mulder,eva.mulder@degoudentarwe.nl,+31 010 1428879,1982-11-22,16,Verkoopmedewerker (parttime),Verkoop,1,1296.34,Vast,20,2015-07-24,,True,
+249,Daan,Hermans,daan.hermans@degoudentarwe.nl,+31 06 12448224,2003-06-03,16,Assistent Manager,Management,4,3033.56,Stage,36,2015-11-12,,True,190
+250,Maria,Jacobs,maria.jacobs@degoudentarwe.nl,+31 06 17376129,1996-06-26,16,Banketbakker,Productie,4,3900.81,Vast,36,2014-01-25,,True,66
+251,Jesse,Schouten,jesse.schouten@degoudentarwe.nl,+31 06 81306758,1968-05-25,16,Assistent Manager,Management,4,3280.74,Stage,24,2016-04-04,,True,167
+252,Lisa,Janssen,lisa.janssen@degoudentarwe.nl,+31 06 77474108,1991-05-03,16,Banketbakker,Productie,4,2948.57,Oproep,0,2015-10-22,,True,38
+253,Lotte,Smit,lotte.smit@degoudentarwe.nl,+31 040 7017462,1993-09-12,16,Verkoopmedewerker (parttime),Verkoop,1,960.66,Vast,40,2017-01-28,,True,
+254,Iris,Smeets,iris.smeets@degoudentarwe.nl,+31 06 13696880,2003-08-17,16,Marketing Medewerker,Marketing,3,3038.91,Tijdelijk,16,2018-04-12,2019-09-08,False,107
+255,Lisa,van den Heuvel,lisa.vandenheuvel@degoudentarwe.nl,+31 010 3286386,1987-10-24,16,Verkoopmedewerker (parttime),Verkoop,1,1185.66,Tijdelijk,20,2018-02-16,,True,
+256,Femke,de Groot,femke.degroot@degoudentarwe.nl,+31 06 89176624,1971-01-21,16,Hoofdbakker,Productie,4,3971.92,Tijdelijk,36,2015-10-28,,True,166
+257,Daan,Dekker,daan.dekker@degoudentarwe.nl,+31 06 19813187,1969-12-05,16,Boekhouder,Financien,4,3391.32,Tijdelijk,36,2017-07-20,,True,209
+258,Julia,van der Meer,julia.vandermeer@degoudentarwe.nl,+31 06 97338097,1969-05-19,16,Regiomanager,Management,6,5545.08,Tijdelijk,24,2018-08-14,,True,48
+259,Roos,de Boer,roos.deboer@degoudentarwe.nl,+31 030 4548386,1995-07-07,16,Schoonmaker,Facilitair,1,1884.97,Oproep,0,2015-02-04,,True,
+260,Daan,van Leeuwen,daan.vanleeuwen@degoudentarwe.nl,+31 010 5369757,1990-01-26,16,Assistent Bakker,Productie,2,2347.64,Tijdelijk,16,2015-04-11,,True,
+261,Hilde,de Wit,hilde.dewit@degoudentarwe.nl,+31 010 9983503,1974-09-17,17,Bakker,Productie,3,2673.09,Tijdelijk,32,2015-08-04,,True,13
+262,Stijn,Peters,stijn.peters@degoudentarwe.nl,+31 030 4309670,1995-06-15,17,Hoofdbakker,Productie,4,3333.57,Vast,40,2014-07-26,2015-07-21,False,6
+263,Thomas,van der Linden,thomas.vanderlinden@degoudentarwe.nl,+31 030 4336528,1995-04-22,17,Bakker,Productie,3,3094.98,Tijdelijk,16,2016-04-04,,True,96
+264,Hans,Brouwer,hans.brouwer@degoudentarwe.nl,+31 020 1929910,1992-11-26,17,Assistent Bakker,Productie,2,1871.50,Oproep,0,2014-01-01,,True,
+265,Daan,de Jong,daan.dejong@degoudentarwe.nl,+31 030 8013517,1967-03-26,17,Hoofdbakker,Productie,4,4204.40,Tijdelijk,16,2016-02-18,,True,168
+266,Geertruida,Kok,geertruida.kok@degoudentarwe.nl,+31 030 1910279,1976-11-01,17,Assistent Bakker,Productie,2,2492.89,Stage,32,2017-11-02,2020-08-24,False,
+267,Charlotte,de Jong,charlotte.dejong@degoudentarwe.nl,+31 06 32159292,1979-06-27,17,Verkoopmedewerker (parttime),Verkoop,1,1052.22,Vast,40,2016-01-02,,True,
+268,Lars,van den Berg,lars.vandenberg@degoudentarwe.nl,+31 020 3871750,1995-09-03,17,Regiomanager,Management,6,5496.93,Tijdelijk,16,2018-10-13,,True,163
+269,Charlotte,Peeters,charlotte.peeters@degoudentarwe.nl,+31 06 10892042,1983-06-12,17,HR Medewerker,HR,4,3774.36,Tijdelijk,16,2014-03-03,,True,245
+270,Levi,Jansen,levi.jansen@degoudentarwe.nl,+31 040 7197425,1977-10-01,17,Filiaalmanager,Management,5,3637.35,Tijdelijk,24,2017-06-16,,True,32
+271,Bram,Mulder,bram.mulder@degoudentarwe.nl,+31 06 80222332,2004-04-01,17,Assistent Banketbakker,Productie,2,2028.66,Stage,20,2018-08-08,,True,
+272,Tessa,Dekker,tessa.dekker@degoudentarwe.nl,+31 010 1591079,1990-06-20,17,Regiomanager,Management,6,5096.38,Oproep,0,2014-02-13,,True,246
+273,Liam,van Vliet,liam.vanvliet@degoudentarwe.nl,+31 06 11519839,1988-11-23,17,Filiaalmanager,Management,5,3882.79,Tijdelijk,40,2014-06-18,,True,108
+274,Hendrik,Visser,hendrik.visser@degoudentarwe.nl,+31 010 7923500,1967-04-21,17,Verkoopmedewerker (parttime),Verkoop,1,1334.36,Stage,32,2014-10-07,,True,
+275,Noa,Jacobs,noa.jacobs@degoudentarwe.nl,+31 030 4927407,1988-01-18,17,Hoofdbakker,Productie,4,4221.17,Stage,36,2014-12-08,,True,60
+276,Esther,de Graaf,esther.degraaf@degoudentarwe.nl,+31 06 25094520,1973-03-19,17,Verkoopmedewerker (parttime),Verkoop,1,1237.26,Tijdelijk,40,2015-04-25,,True,
+277,Liam,Willems,liam.willems@degoudentarwe.nl,+31 030 7778891,1980-09-26,17,Assistent Bakker,Productie,2,1933.27,Stage,40,2018-06-20,,True,
+278,Dirk,Klein,dirk.klein@degoudentarwe.nl,+31 06 49935621,2001-09-24,17,Banketbakker,Productie,4,3289.40,Oproep,0,2015-02-06,,True,227
+279,Liam,Willems,liam.willems@degoudentarwe.nl,+31 030 6151012,1968-06-16,17,Assistent Bakker,Productie,2,2419.46,Tijdelijk,40,2018-01-30,,True,
+280,Liam,Klein,liam.klein@degoudentarwe.nl,+31 040 8285405,1999-07-04,17,Filiaalmanager,Management,5,4941.88,Vast,20,2019-10-25,,True,177
+281,Johanna,Kok,johanna.kok@degoudentarwe.nl,+31 030 6430578,1974-05-24,18,Assistent Manager,Management,4,3258.32,Oproep,0,2018-06-16,,True,268
+282,Sem,Jacobs,sem.jacobs@degoudentarwe.nl,+31 030 9987344,1995-02-08,18,Regiomanager,Management,6,4597.24,Tijdelijk,40,2014-10-05,,True,244
+283,Sophie,Dekker,sophie.dekker@degoudentarwe.nl,+31 06 57490267,1983-04-04,18,HR Medewerker,HR,4,2804.72,Oproep,0,2015-06-02,,True,119
+284,Julia,Hoekstra,julia.hoekstra@degoudentarwe.nl,+31 010 9203234,1980-07-16,18,Schoonmaker,Facilitair,1,1806.59,Tijdelijk,16,2017-10-28,,True,
+285,Jan,Schouten,jan.schouten@degoudentarwe.nl,+31 040 7701629,1998-12-15,18,Regiomanager,Management,6,5420.82,Tijdelijk,20,2014-11-09,,True,245
+286,Maria,van Vliet,maria.vanvliet@degoudentarwe.nl,+31 030 3347815,1986-01-06,18,Bezorger,Logistiek,2,2127.90,Tijdelijk,20,2017-03-08,,True,
+287,Petronella,Jansen,petronella.jansen@degoudentarwe.nl,+31 06 58228363,1989-12-27,18,Filiaalmanager,Management,5,3669.16,Tijdelijk,32,2019-02-07,,True,128
+288,Tessa,van Dijk,tessa.vandijk@degoudentarwe.nl,+31 06 80198129,1972-03-18,18,Assistent Bakker,Productie,2,1899.10,Oproep,0,2014-10-27,,True,
+289,Tessa,van de Ven,tessa.vandeven@degoudentarwe.nl,+31 010 5660929,1988-04-27,18,HR Medewerker,HR,4,2869.55,Oproep,0,2015-04-11,,True,120
+290,Thijs,van den Heuvel,thijs.vandenheuvel@degoudentarwe.nl,+31 040 9165915,1994-03-18,18,Filiaalmanager,Management,5,4599.35,Stage,24,2018-06-15,,True,68
+291,Hans,Vos,hans.vos@degoudentarwe.nl,+31 06 70705958,1978-05-26,18,Magazijnmedewerker,Logistiek,2,1883.07,Tijdelijk,32,2016-12-31,,True,
+292,Lieke,Schouten,lieke.schouten@degoudentarwe.nl,+31 010 4785263,1984-04-23,18,Leerling Bakker,Productie,1,1677.64,Stage,36,2015-11-03,,True,
+293,Geertruida,Kok,geertruida.kok@degoudentarwe.nl,+31 010 2896174,1982-06-21,18,Assistent Manager,Management,4,2928.56,Vast,20,2015-07-31,,True,39
+294,Adriana,de Jong,adriana.dejong@degoudentarwe.nl,+31 020 2251265,1966-01-25,18,Hoofdbakker,Productie,4,3456.89,Oproep,0,2016-05-26,,True,259
+295,Liam,Kuiper,liam.kuiper@degoudentarwe.nl,+31 040 7203563,1987-09-22,18,Assistent Bakker,Productie,2,1879.78,Vast,32,2014-07-02,,True,
+296,Eva,Mulder,eva.mulder@degoudentarwe.nl,+31 030 4799911,1973-02-06,18,Leerling Bakker,Productie,1,1828.83,Vast,20,2015-12-11,,True,
+297,Emma,Smit,emma.smit@degoudentarwe.nl,+31 06 90680322,1996-09-03,18,Bezorger,Logistiek,2,2243.05,Tijdelijk,40,2017-10-29,,True,
+298,Tessa,van de Ven,tessa.vandeven@degoudentarwe.nl,+31 06 54772704,1980-01-25,18,Marketing Medewerker,Marketing,3,3363.77,Stage,32,2015-04-27,2019-03-16,False,145
+299,Wilhelmina,de Haan,wilhelmina.dehaan@degoudentarwe.nl,+31 040 7407998,1970-02-24,18,Assistent Manager,Management,4,2916.01,Vast,40,2017-01-18,,True,85
+300,Emma,de Vries,emma.devries@degoudentarwe.nl,+31 06 79544123,1968-07-16,18,Bakker,Productie,3,2760.16,Oproep,0,2016-02-28,,True,89
+301,Esther,Kuiper,esther.kuiper@degoudentarwe.nl,+31 06 66685015,2003-01-27,19,Assistent Bakker,Productie,2,2207.57,Stage,16,2014-08-03,,True,
+302,Noa,Janssen,noa.janssen@degoudentarwe.nl,+31 06 71714413,1989-10-07,19,Marketing Medewerker,Marketing,3,3035.57,Vast,16,2016-07-17,,True,228
+303,Evi,Bakker,evi.bakker@degoudentarwe.nl,+31 06 99003618,1992-03-27,19,Regiomanager,Management,6,5445.08,Oproep,0,2015-02-05,,True,105
+304,Levi,Kuiper,levi.kuiper@degoudentarwe.nl,+31 030 4441294,1975-09-16,19,Assistent Bakker,Productie,2,2205.64,Tijdelijk,20,2015-07-03,,True,
+305,Evi,Willems,evi.willems@degoudentarwe.nl,+31 06 97823408,1985-03-11,19,HR Medewerker,HR,4,3693.66,Tijdelijk,40,2015-12-08,2016-04-14,False,90
+306,Hendrik,Jacobs,hendrik.jacobs@degoudentarwe.nl,+31 020 4524458,1993-06-22,19,Filiaalmanager,Management,5,3648.23,Vast,24,2015-06-15,,True,221
+307,Marieke,de Vries,marieke.devries@degoudentarwe.nl,+31 06 91796176,1977-06-06,19,Leerling Bakker,Productie,1,1828.76,Vast,16,2017-03-27,,True,
+308,Hilde,Strik,hilde.strik@degoudentarwe.nl,+31 06 90597183,1985-02-08,19,Assistent Banketbakker,Productie,2,2722.46,Vast,40,2016-01-19,,True,
+309,Niels,Smit,niels.smit@degoudentarwe.nl,+31 040 1076593,1971-06-14,19,Bezorger,Logistiek,2,1906.89,Vast,40,2018-10-26,2020-11-30,False,
+310,Esther,Wolters,esther.wolters@degoudentarwe.nl,+31 010 2013988,1970-10-19,19,Assistent Manager,Management,4,3212.44,Oproep,0,2017-01-07,,True,121
+311,Kees,Strik,kees.strik@degoudentarwe.nl,+31 06 24186117,1974-10-08,19,Banketbakker,Productie,4,3866.75,Stage,32,2018-06-13,2022-06-15,False,241
+312,Dirk,Klein,dirk.klein@degoudentarwe.nl,+31 040 3521555,1992-02-04,19,Bezorger,Logistiek,2,2176.19,Oproep,0,2019-09-07,,True,
+313,Annemiek,Peeters,annemiek.peeters@degoudentarwe.nl,+31 020 9038040,2004-02-10,19,Marketing Medewerker,Marketing,3,3309.81,Stage,40,2016-03-21,,True,216
+314,Lynn,van Beek,lynn.vanbeek@degoudentarwe.nl,+31 06 43497830,1973-10-18,19,Magazijnmedewerker,Logistiek,2,2094.09,Vast,16,2015-06-23,,True,
+315,Petronella,de Graaf,petronella.degraaf@degoudentarwe.nl,+31 06 49990180,1986-11-23,19,Regiomanager,Management,6,4808.84,Oproep,0,2015-07-31,,True,277
+316,Femke,Smeets,femke.smeets@degoudentarwe.nl,+31 06 91463619,1969-07-27,19,Assistent Bakker,Productie,2,2426.39,Stage,16,2018-12-02,,True,
+317,Stijn,van den Berg,stijn.vandenberg@degoudentarwe.nl,+31 06 82299986,1986-11-01,19,Leerling Bakker,Productie,1,1771.10,Stage,32,2017-12-14,,True,
+318,Liam,de Graaf,liam.degraaf@degoudentarwe.nl,+31 020 6279545,2002-12-18,19,Assistent Bakker,Productie,2,1936.48,Vast,16,2019-01-24,,True,
+319,Liam,Klein,liam.klein@degoudentarwe.nl,+31 020 7433409,1979-06-22,19,Marketing Medewerker,Marketing,3,3323.83,Stage,36,2014-10-30,,True,216
+320,Milan,Klein,milan.klein@degoudentarwe.nl,+31 040 2172303,1991-11-04,19,Regiomanager,Management,6,5217.94,Oproep,0,2019-02-19,,True,37
+321,Annemiek,Smeets,annemiek.smeets@degoudentarwe.nl,+31 06 40500662,2001-02-19,20,Bezorger,Logistiek,2,2277.16,Vast,16,2017-02-19,,True,
+322,Levi,van der Linden,levi.vanderlinden@degoudentarwe.nl,+31 040 1727618,1967-07-01,20,Assistent Manager,Management,4,3149.86,Tijdelijk,40,2014-07-16,,True,301
+323,Levi,van der Meer,levi.vandermeer@degoudentarwe.nl,+31 06 83350459,1983-02-06,20,Assistent Banketbakker,Productie,2,2680.33,Stage,32,2017-12-01,2018-05-09,False,
+324,Julia,Visser,julia.visser@degoudentarwe.nl,+31 06 17025242,1990-05-17,20,Marketing Medewerker,Marketing,3,3549.70,Vast,32,2018-07-17,,True,97
+325,Sanne,Hoekstra,sanne.hoekstra@degoudentarwe.nl,+31 06 89813547,1990-08-26,20,Hoofdbakker,Productie,4,3752.88,Stage,36,2017-12-21,,True,22
+326,Marieke,van Beek,marieke.vanbeek@degoudentarwe.nl,+31 010 2545730,1977-05-04,20,Bakker,Productie,3,3278.22,Tijdelijk,20,2017-11-22,,True,263
+327,Noah,van Vliet,noah.vanvliet@degoudentarwe.nl,+31 06 41591758,1974-10-28,20,Verkoopmedewerker (parttime),Verkoop,1,1011.30,Vast,36,2015-08-20,,True,
+328,Wilhelmina,de Wit,wilhelmina.dewit@degoudentarwe.nl,+31 06 96385376,1973-06-21,20,Verkoopmedewerker (parttime),Verkoop,1,1066.98,Vast,36,2018-07-02,,True,
+329,Maria,de Jong,maria.dejong@degoudentarwe.nl,+31 06 63741839,1990-02-23,21,Assistent Bakker,Productie,2,2468.40,Tijdelijk,40,2016-09-14,,True,
+330,Sara,de Wit,sara.dewit@degoudentarwe.nl,+31 040 5065999,1983-09-27,21,Banketbakker,Productie,4,3537.54,Oproep,0,2018-07-24,2020-01-16,False,119
+331,Max,van Beek,max.vanbeek@degoudentarwe.nl,+31 06 62701987,2002-10-03,21,Assistent Bakker,Productie,2,2222.67,Stage,40,2019-01-07,,True,
+332,Mila,Kok,mila.kok@degoudentarwe.nl,+31 06 62685972,1976-04-26,21,Boekhouder,Financien,4,3485.78,Oproep,0,2014-02-13,,True,18
+333,Ingrid,Jansen,ingrid.jansen@degoudentarwe.nl,+31 06 14644521,1991-06-27,21,Bakker,Productie,3,2838.91,Tijdelijk,32,2018-03-15,2021-07-08,False,197
+334,Sophie,Prins,sophie.prins@degoudentarwe.nl,+31 06 59865410,1972-04-05,21,Leerling Bakker,Productie,1,1859.19,Stage,24,2014-11-07,,True,
+335,Sara,Vos,sara.vos@degoudentarwe.nl,+31 020 5629673,1997-10-04,21,Schoonmaker,Facilitair,1,1805.08,Vast,32,2017-07-16,,True,
+336,Tessa,Strik,tessa.strik@degoudentarwe.nl,+31 06 86554325,1981-05-06,21,HR Medewerker,HR,4,3354.58,Stage,16,2014-08-15,,True,123
+337,Fleur,Visser,fleur.visser@degoudentarwe.nl,+31 06 90196412,1980-07-15,22,Assistent Bakker,Productie,2,1985.90,Oproep,0,2016-03-05,,True,
+338,Pieter,van der Linden,pieter.vanderlinden@degoudentarwe.nl,+31 06 43501397,1967-01-20,22,HR Medewerker,HR,4,3347.25,Oproep,0,2015-10-10,,True,219
+339,Wim,Smeets,wim.smeets@degoudentarwe.nl,+31 040 5858105,1969-11-09,22,Schoonmaker,Facilitair,1,1738.51,Oproep,0,2013-10-28,,True,
+340,Maria,Peters,maria.peters@degoudentarwe.nl,+31 030 9335932,1967-12-05,22,Assistent Manager,Management,4,2907.41,Stage,24,2017-03-12,2019-03-21,False,122
+341,Ingrid,Groen,ingrid.groen@degoudentarwe.nl,+31 040 5903482,1996-01-21,22,Assistent Manager,Management,4,3780.02,Oproep,0,2014-03-23,,True,209
+342,Hendrik,van der Meer,hendrik.vandermeer@degoudentarwe.nl,+31 040 6672359,1980-03-23,22,Bezorger,Logistiek,2,2123.97,Oproep,0,2018-04-02,,True,
+343,Mila,de Graaf,mila.degraaf@degoudentarwe.nl,+31 06 49132217,1977-09-28,22,Leerling Bakker,Productie,1,1684.70,Stage,24,2015-03-06,,True,
+344,Pieter,Kok,pieter.kok@degoudentarwe.nl,+31 06 99056252,1996-01-09,22,HR Medewerker,HR,4,3161.33,Stage,40,2017-10-20,,True,65
+345,Cornelia,van Dijk,cornelia.vandijk@degoudentarwe.nl,+31 040 8602606,1995-11-08,23,Bezorger,Logistiek,2,1837.54,Vast,32,2015-12-31,,True,
+346,Max,Groen,max.groen@degoudentarwe.nl,+31 040 7027464,1965-04-19,23,Magazijnmedewerker,Logistiek,2,2122.28,Oproep,0,2018-10-11,,True,
+347,Lucas,Bos,lucas.bos@degoudentarwe.nl,+31 06 61289119,1995-11-27,23,Schoonmaker,Facilitair,1,1725.81,Vast,32,2018-10-21,,True,
+348,Lars,Vermeer,lars.vermeer@degoudentarwe.nl,+31 040 3223550,1970-03-08,23,Filiaalmanager,Management,5,3892.04,Stage,36,2017-12-30,,True,151
+349,Emma,van der Velden,emma.vandervelden@degoudentarwe.nl,+31 06 88954042,1983-03-15,23,Assistent Manager,Management,4,3752.14,Tijdelijk,20,2015-06-18,,True,136
+350,Hendrik,van den Heuvel,hendrik.vandenheuvel@degoudentarwe.nl,+31 010 6642816,1969-06-11,23,Bezorger,Logistiek,2,2204.65,Stage,40,2016-09-18,2017-01-29,False,
+351,Sem,de Jong,sem.dejong@degoudentarwe.nl,+31 06 45775081,1989-10-03,23,Banketbakker,Productie,4,3910.07,Stage,24,2017-11-10,,True,20
+352,Petronella,van Leeuwen,petronella.vanleeuwen@degoudentarwe.nl,+31 010 4189791,1981-12-08,23,Assistent Banketbakker,Productie,2,2219.72,Oproep,0,2018-12-24,,True,
+353,Ruben,Bos,ruben.bos@degoudentarwe.nl,+31 040 2320127,1978-03-23,23,Regiomanager,Management,6,6013.45,Oproep,0,2017-10-29,,True,91
+354,Lynn,Vermeer,lynn.vermeer@degoudentarwe.nl,+31 06 19374434,2002-10-19,23,Bakker,Productie,3,2799.93,Tijdelijk,16,2017-04-01,,True,305
+355,Milan,Groen,milan.groen@degoudentarwe.nl,+31 030 5517975,2001-12-19,23,Boekhouder,Financien,4,4122.17,Vast,36,2016-04-18,,True,247
+356,Thijs,Vermeer,thijs.vermeer@degoudentarwe.nl,+31 06 65575367,1998-03-12,23,Verkoopmedewerker (parttime),Verkoop,1,1230.61,Stage,20,2017-12-04,,True,
+357,Greta,Brouwer,greta.brouwer@degoudentarwe.nl,+31 06 43277602,1988-04-06,23,Regiomanager,Management,6,4954.97,Oproep,0,2018-03-24,,True,332
+358,Frans,van Vliet,frans.vanvliet@degoudentarwe.nl,+31 030 3390262,2003-12-23,23,Regiomanager,Management,6,4688.85,Tijdelijk,36,2016-09-22,,True,285
+359,Milan,Meijer,milan.meijer@degoudentarwe.nl,+31 030 6516481,1992-12-11,24,Assistent Banketbakker,Productie,2,2744.82,Oproep,0,2014-11-05,,True,
+360,Jesse,Smit,jesse.smit@degoudentarwe.nl,+31 06 10612254,1997-01-03,24,Assistent Banketbakker,Productie,2,2799.79,Oproep,0,2019-04-07,,True,
+361,Tessa,van Beek,tessa.vanbeek@degoudentarwe.nl,+31 010 1624011,1977-01-14,24,Assistent Bakker,Productie,2,2018.40,Stage,20,2018-05-23,,True,
+362,Cornelia,de Haan,cornelia.dehaan@degoudentarwe.nl,+31 040 7284668,1972-10-10,24,Verkoopmedewerker (parttime),Verkoop,1,1332.45,Stage,36,2019-04-23,,True,
+363,Cornelia,Prins,cornelia.prins@degoudentarwe.nl,+31 030 5885505,1969-09-06,24,HR Medewerker,HR,4,3175.16,Tijdelijk,24,2018-10-16,,True,17
+364,Gerard,van der Velden,gerard.vandervelden@degoudentarwe.nl,+31 030 4891966,1983-04-07,24,Assistent Bakker,Productie,2,2169.27,Stage,20,2018-01-24,,True,
+365,Lisa,de Haan,lisa.dehaan@degoudentarwe.nl,+31 020 5769910,1977-05-20,24,Filiaalmanager,Management,5,3892.60,Vast,40,2016-05-23,,True,220
+366,Sem,de Boer,sem.deboer@degoudentarwe.nl,+31 040 6223505,1974-07-26,24,Filiaalmanager,Management,5,4102.42,Vast,32,2016-02-09,,True,81
+367,Emma,de Graaf,emma.degraaf@degoudentarwe.nl,+31 06 56466303,1990-05-23,25,Verkoopmedewerker,Verkoop,2,2290.56,Stage,16,2019-01-20,,True,
+368,Ingrid,de Graaf,ingrid.degraaf@degoudentarwe.nl,+31 030 8442440,1998-03-19,25,Assistent Bakker,Productie,2,2499.79,Stage,32,2017-01-18,,True,
+369,Hans,de Boer,hans.deboer@degoudentarwe.nl,+31 06 48550699,2002-11-25,25,Schoonmaker,Facilitair,1,1797.15,Vast,40,2016-11-26,,True,
+370,Liam,Prins,liam.prins@degoudentarwe.nl,+31 06 62448284,1990-06-01,25,Bezorger,Logistiek,2,2296.20,Oproep,0,2015-11-17,,True,
+371,Niels,Janssen,niels.janssen@degoudentarwe.nl,+31 06 68285030,1967-02-25,25,Verkoopmedewerker (parttime),Verkoop,1,1358.79,Stage,16,2018-09-10,,True,
+372,Willem,Hendriks,willem.hendriks@degoudentarwe.nl,+31 040 9381184,2004-11-07,25,Regiomanager,Management,6,5827.90,Oproep,0,2015-03-03,,True,124
+373,Hans,Vermeer,hans.vermeer@degoudentarwe.nl,+31 06 92491771,2004-09-04,25,Filiaalmanager,Management,5,3531.44,Oproep,0,2014-04-25,,True,9
+374,Geertruida,Dijkstra,geertruida.dijkstra@degoudentarwe.nl,+31 010 2209255,1972-12-08,25,Filiaalmanager,Management,5,4400.52,Tijdelijk,20,2016-05-09,,True,349
+375,Iris,van den Berg,iris.vandenberg@degoudentarwe.nl,+31 040 6072219,1975-04-03,26,Verkoopmedewerker (parttime),Verkoop,1,967.90,Tijdelijk,20,2018-09-01,,True,
+376,Cornelia,van den Berg,cornelia.vandenberg@degoudentarwe.nl,+31 06 93994857,2004-06-08,26,Banketbakker,Productie,4,2826.31,Stage,20,2016-08-16,,True,185
+377,Liam,Vermeer,liam.vermeer@degoudentarwe.nl,+31 06 39076677,2001-04-20,26,Bakker,Productie,3,3351.79,Tijdelijk,16,2015-06-16,,True,78
+378,Jesse,Hendriks,jesse.hendriks@degoudentarwe.nl,+31 020 7628159,1978-09-23,26,Marketing Medewerker,Marketing,3,3014.44,Oproep,0,2015-08-06,,True,71
+379,Sophie,Jacobs,sophie.jacobs@degoudentarwe.nl,+31 06 60401924,1998-02-10,26,Leerling Bakker,Productie,1,1730.37,Vast,40,2017-12-30,,True,
+380,Noa,van Leeuwen,noa.vanleeuwen@degoudentarwe.nl,+31 040 7226287,1981-06-28,26,Schoonmaker,Facilitair,1,1740.64,Stage,24,2017-11-14,,True,
+381,Wim,Groen,wim.groen@degoudentarwe.nl,+31 06 83765540,1980-02-22,26,Assistent Manager,Management,4,3243.16,Stage,40,2018-03-25,2022-04-19,False,312
+382,Tessa,de Jong,tessa.dejong@degoudentarwe.nl,+31 06 14935975,1996-09-27,26,Magazijnmedewerker,Logistiek,2,2098.43,Oproep,0,2018-10-11,,True,
+383,Lars,van Leeuwen,lars.vanleeuwen@degoudentarwe.nl,+31 030 7957199,1998-02-18,27,Bezorger,Logistiek,2,1961.21,Stage,24,2017-11-03,,True,
+384,Tim,Vermeer,tim.vermeer@degoudentarwe.nl,+31 06 39297446,1989-01-20,27,Banketbakker,Productie,4,3357.19,Tijdelijk,36,2018-10-22,,True,200
+385,Fleur,Willems,fleur.willems@degoudentarwe.nl,+31 030 5244453,1997-11-27,27,Marketing Medewerker,Marketing,3,2725.27,Tijdelijk,24,2019-06-02,,True,30
+386,Mila,Hendriks,mila.hendriks@degoudentarwe.nl,+31 06 81642559,1978-05-04,27,Assistent Bakker,Productie,2,2302.96,Tijdelijk,32,2018-02-05,,True,
+387,Femke,Smit,femke.smit@degoudentarwe.nl,+31 020 3183557,2002-03-12,27,HR Medewerker,HR,4,3727.79,Stage,20,2019-06-28,,True,103
+388,Sanne,Brouwer,sanne.brouwer@degoudentarwe.nl,+31 06 83739760,1978-11-09,27,Hoofdbakker,Productie,4,4429.86,Stage,40,2017-08-05,,True,52
+389,Pieter,Willems,pieter.willems@degoudentarwe.nl,+31 06 88288005,1975-08-13,27,Schoonmaker,Facilitair,1,1635.50,Tijdelijk,24,2017-06-01,,True,
+390,Lars,Prins,lars.prins@degoudentarwe.nl,+31 010 9478543,1979-05-26,27,Marketing Medewerker,Marketing,3,2745.22,Oproep,0,2018-05-17,2022-02-20,False,386
+391,Max,Strik,max.strik@degoudentarwe.nl,+31 06 18774447,1990-05-27,28,Regiomanager,Management,6,6443.96,Tijdelijk,16,2014-02-17,,True,377
+392,Dirk,Groen,dirk.groen@degoudentarwe.nl,+31 06 77584989,1975-03-18,28,Assistent Bakker,Productie,2,2013.38,Stage,16,2017-09-07,2018-09-21,False,
+393,Wilhelmina,van der Velden,wilhelmina.vandervelden@degoudentarwe.nl,+31 06 43678282,1979-08-27,28,Boekhouder,Financien,4,3180.49,Stage,32,2019-01-22,,True,128
+394,Julia,van Beek,julia.vanbeek@degoudentarwe.nl,+31 06 12613599,1979-11-14,28,Assistent Banketbakker,Productie,2,2565.03,Stage,24,2014-11-03,,True,
+395,Tim,van Dijk,tim.vandijk@degoudentarwe.nl,+31 06 58977853,2003-10-03,28,Banketbakker,Productie,4,3467.01,Oproep,0,2017-06-26,,True,52
+396,Yara,Janssen,yara.janssen@degoudentarwe.nl,+31 010 4029855,1968-01-09,28,Boekhouder,Financien,4,3458.62,Tijdelijk,32,2014-04-18,,True,259
+397,Roos,Visser,roos.visser@degoudentarwe.nl,+31 06 83220125,1994-12-06,28,Regiomanager,Management,6,5080.39,Stage,20,2016-07-24,,True,251
+398,Lieke,Schouten,lieke.schouten@degoudentarwe.nl,+31 030 2898972,1965-08-15,28,Verkoopmedewerker,Verkoop,2,1972.98,Vast,16,2018-06-15,,True,
+399,Jesse,Molenaar,jesse.molenaar@degoudentarwe.nl,+31 040 4540801,1982-02-15,28,Verkoopmedewerker,Verkoop,2,1988.28,Oproep,0,2017-03-17,,True,
+400,Femke,van Dijk,femke.vandijk@degoudentarwe.nl,+31 040 5020855,1974-11-24,28,Verkoopmedewerker (parttime),Verkoop,1,948.56,Oproep,0,2015-01-31,,True,
+401,Mila,van de Ven,mila.vandeven@degoudentarwe.nl,+31 040 6454704,1979-03-28,28,Magazijnmedewerker,Logistiek,2,2216.85,Tijdelijk,32,2018-04-28,,True,
+402,Fenna,Janssen,fenna.janssen@degoudentarwe.nl,+31 020 1649037,1995-09-26,28,Schoonmaker,Facilitair,1,1817.41,Oproep,0,2014-01-08,,True,
+403,Petronella,Bos,petronella.bos@degoudentarwe.nl,+31 06 74848993,1983-06-17,28,Regiomanager,Management,6,4913.62,Stage,36,2018-04-26,,True,39
+404,Adriana,Strik,adriana.strik@degoudentarwe.nl,+31 040 5192316,1981-02-23,28,Hoofdbakker,Productie,4,4069.58,Oproep,0,2015-07-21,,True,356
+405,Annemiek,van Beek,annemiek.vanbeek@degoudentarwe.nl,+31 06 97856262,2000-01-20,29,Assistent Bakker,Productie,2,1826.99,Tijdelijk,20,2017-06-16,,True,
+406,Femke,Hendriks,femke.hendriks@degoudentarwe.nl,+31 030 4934724,1993-01-14,29,Assistent Banketbakker,Productie,2,2582.85,Oproep,0,2017-08-28,,True,
+407,Ingrid,Dijkstra,ingrid.dijkstra@degoudentarwe.nl,+31 030 9235769,1977-07-07,29,HR Medewerker,HR,4,3063.77,Stage,36,2017-01-29,,True,2
+408,Gerard,Visser,gerard.visser@degoudentarwe.nl,+31 020 8262329,1978-02-25,29,Hoofdbakker,Productie,4,3753.55,Tijdelijk,32,2017-10-12,,True,390
+409,Esther,van den Berg,esther.vandenberg@degoudentarwe.nl,+31 030 2919968,1965-11-13,29,HR Medewerker,HR,4,3678.87,Oproep,0,2019-05-23,,True,378
+410,Joost,Vos,joost.vos@degoudentarwe.nl,+31 010 4413213,2003-12-25,29,Verkoopmedewerker (parttime),Verkoop,1,1106.29,Vast,36,2017-04-06,,True,
+411,Pieter,Hoekstra,pieter.hoekstra@degoudentarwe.nl,+31 040 4632955,1973-03-27,29,Assistent Manager,Management,4,3651.38,Tijdelijk,36,2017-10-20,,True,243
+412,Jesse,Smeets,jesse.smeets@degoudentarwe.nl,+31 06 92552619,1981-01-21,29,Schoonmaker,Facilitair,1,1656.76,Oproep,0,2017-08-11,,True,
+413,Lotte,Klein,lotte.klein@degoudentarwe.nl,+31 040 8851737,1995-08-21,30,Hoofdbakker,Productie,4,3333.10,Tijdelijk,32,2017-11-10,,True,25
+414,Sem,van der Linden,sem.vanderlinden@degoudentarwe.nl,+31 040 4742673,1978-07-06,30,Banketbakker,Productie,4,3852.88,Oproep,0,2018-05-11,,True,218
+415,Johanna,Hermans,johanna.hermans@degoudentarwe.nl,+31 030 1021122,1998-06-01,30,Regiomanager,Management,6,6475.19,Stage,24,2015-06-22,2016-03-07,False,285
+416,Wilhelmina,Visser,wilhelmina.visser@degoudentarwe.nl,+31 040 4042323,1999-12-10,30,Regiomanager,Management,6,5419.73,Tijdelijk,40,2018-04-14,,True,290
+417,Max,van Beek,max.vanbeek@degoudentarwe.nl,+31 030 2737548,1978-06-27,30,Marketing Medewerker,Marketing,3,3485.16,Stage,24,2015-03-24,2018-08-10,False,358
+418,Kees,de Haan,kees.dehaan@degoudentarwe.nl,+31 06 14350407,1968-03-02,30,Schoonmaker,Facilitair,1,1629.44,Oproep,0,2018-07-03,,True,
+419,Fleur,van der Linden,fleur.vanderlinden@degoudentarwe.nl,+31 030 3218801,1975-07-11,30,Filiaalmanager,Management,5,3754.39,Stage,20,2019-05-11,,True,128
+420,Maria,Meijer,maria.meijer@degoudentarwe.nl,+31 06 85012373,1969-01-06,30,Leerling Bakker,Productie,1,1879.53,Oproep,0,2014-12-19,,True,
+421,Kees,Hoekstra,kees.hoekstra@degoudentarwe.nl,+31 010 4692874,1998-06-23,30,Assistent Banketbakker,Productie,2,2667.05,Vast,20,2016-07-04,,True,
+422,Fleur,Klein,fleur.klein@degoudentarwe.nl,+31 040 5391535,2004-11-17,30,Bakker,Productie,3,2539.24,Tijdelijk,40,2017-12-24,,True,405
+423,Finn,van den Berg,finn.vandenberg@degoudentarwe.nl,+31 010 2039121,1998-12-22,30,HR Medewerker,HR,4,3787.40,Oproep,0,2014-11-14,,True,303
+424,Annemiek,Groen,annemiek.groen@degoudentarwe.nl,+31 020 4361042,1976-03-26,30,Assistent Bakker,Productie,2,1952.07,Oproep,0,2018-04-09,2018-07-01,False,
+425,Lisa,van Vliet,lisa.vanvliet@degoudentarwe.nl,+31 06 38543191,1999-04-07,30,Magazijnmedewerker,Logistiek,2,2258.58,Oproep,0,2016-11-21,,True,
+426,Niels,Hermans,niels.hermans@degoudentarwe.nl,+31 040 3988854,1967-02-19,30,Banketbakker,Productie,4,3735.41,Vast,16,2018-06-14,,True,390
+427,Lars,Willems,lars.willems@degoudentarwe.nl,+31 06 42264845,1994-03-18,31,Verkoopmedewerker,Verkoop,2,2003.26,Tijdelijk,16,2017-05-05,,True,
+428,Lotte,de Graaf,lotte.degraaf@degoudentarwe.nl,+31 06 43679357,1991-10-03,31,Magazijnmedewerker,Logistiek,2,2049.74,Vast,36,2015-07-28,2016-10-27,False,
+429,Jesse,Janssen,jesse.janssen@degoudentarwe.nl,+31 040 4331414,1984-03-02,31,Filiaalmanager,Management,5,3610.52,Vast,24,2015-09-13,,True,121
+430,Luuk,Mulder,luuk.mulder@degoudentarwe.nl,+31 06 51680436,2004-08-27,31,Boekhouder,Financien,4,4150.71,Vast,32,2015-10-02,,True,86
+431,Lotte,van Beek,lotte.vanbeek@degoudentarwe.nl,+31 020 5658125,1965-01-26,31,Assistent Bakker,Productie,2,1816.91,Tijdelijk,36,2017-07-06,,True,
+432,Anna,van de Ven,anna.vandeven@degoudentarwe.nl,+31 030 5221051,1983-11-24,31,Boekhouder,Financien,4,4063.76,Vast,32,2018-09-16,,True,185
+433,Eva,Jacobs,eva.jacobs@degoudentarwe.nl,+31 06 92369193,1971-08-12,31,Verkoopmedewerker (parttime),Verkoop,1,987.36,Vast,20,2017-02-25,,True,
+434,Fleur,Willems,fleur.willems@degoudentarwe.nl,+31 020 8033936,1976-11-13,31,Bakker,Productie,3,2456.04,Stage,20,2016-08-27,,True,231
+435,Sanne,Wolters,sanne.wolters@degoudentarwe.nl,+31 030 4574254,2003-02-14,32,Verkoopmedewerker (parttime),Verkoop,1,1147.00,Stage,24,2015-03-24,,True,
+436,Johanna,Vermeer,johanna.vermeer@degoudentarwe.nl,+31 020 5606477,2003-03-08,32,Verkoopmedewerker,Verkoop,2,1984.46,Vast,20,2018-01-20,2021-05-22,False,
+437,Emma,Dekker,emma.dekker@degoudentarwe.nl,+31 06 68621980,1972-12-18,32,Verkoopmedewerker,Verkoop,2,2084.97,Oproep,0,2015-01-10,,True,
+438,Luuk,Hoekstra,luuk.hoekstra@degoudentarwe.nl,+31 030 3571051,1992-06-15,32,Boekhouder,Financien,4,3338.35,Tijdelijk,16,2015-10-05,,True,127
+439,Iris,van Dijk,iris.vandijk@degoudentarwe.nl,+31 040 8314317,1979-01-01,32,Boekhouder,Financien,4,3662.27,Tijdelijk,36,2015-04-02,,True,386
+440,Geertruida,Strik,geertruida.strik@degoudentarwe.nl,+31 020 7702225,1974-04-14,32,Bezorger,Logistiek,2,2369.74,Vast,36,2016-07-31,,True,
+441,Stijn,Kuiper,stijn.kuiper@degoudentarwe.nl,+31 020 6947723,1989-01-24,32,Marketing Medewerker,Marketing,3,3084.47,Oproep,0,2014-07-19,2015-04-12,False,437
+442,Jan,Jacobs,jan.jacobs@degoudentarwe.nl,+31 020 5323773,2002-03-05,32,Banketbakker,Productie,4,2879.04,Stage,24,2016-04-29,,True,196
+443,Femke,Smit,femke.smit@degoudentarwe.nl,+31 06 99949545,1991-05-07,32,Assistent Banketbakker,Productie,2,2277.46,Oproep,0,2018-04-03,,True,
+444,Geertruida,Smit,geertruida.smit@degoudentarwe.nl,+31 06 61601817,2001-10-16,32,Boekhouder,Financien,4,3158.17,Vast,36,2019-01-08,,True,172
+445,Greta,de Jong,greta.dejong@degoudentarwe.nl,+31 040 3869940,1981-05-03,32,Bakker,Productie,3,3309.06,Stage,16,2016-02-01,,True,233
+446,Lisa,de Groot,lisa.degroot@degoudentarwe.nl,+31 040 5681991,2000-09-27,32,Assistent Manager,Management,4,3348.65,Tijdelijk,40,2016-11-30,,True,1
+447,Dirk,Vermeer,dirk.vermeer@degoudentarwe.nl,+31 010 8010612,1971-11-16,32,Marketing Medewerker,Marketing,3,3523.15,Tijdelijk,16,2017-09-19,,True,264
+448,Levi,de Boer,levi.deboer@degoudentarwe.nl,+31 06 20553706,1988-07-24,32,Magazijnmedewerker,Logistiek,2,2127.58,Tijdelijk,24,2018-04-11,,True,
+449,Jan,van den Berg,jan.vandenberg@degoudentarwe.nl,+31 020 8812031,2004-12-22,32,Boekhouder,Financien,4,3420.66,Stage,40,2015-10-21,,True,199
+450,Niels,van den Berg,niels.vandenberg@degoudentarwe.nl,+31 06 97201143,1999-03-14,32,Assistent Banketbakker,Productie,2,2480.96,Oproep,0,2016-06-26,,True,
+451,Finn,Vermeer,finn.vermeer@degoudentarwe.nl,+31 020 3125233,1989-09-19,32,Assistent Bakker,Productie,2,1980.14,Vast,36,2016-02-14,,True,
+452,Eva,van Dijk,eva.vandijk@degoudentarwe.nl,+31 06 59707804,1968-07-28,32,Boekhouder,Financien,4,3834.78,Stage,20,2013-12-12,,True,205
+453,Hendrik,Dijkstra,hendrik.dijkstra@degoudentarwe.nl,+31 06 20206414,1980-01-20,32,Verkoopmedewerker (parttime),Verkoop,1,1094.08,Oproep,0,2015-07-24,,True,
+454,Pieter,Vermeer,pieter.vermeer@degoudentarwe.nl,+31 06 99601080,1981-05-25,32,Regiomanager,Management,6,5372.80,Tijdelijk,40,2017-12-03,,True,56
+455,Julia,Visser,julia.visser@degoudentarwe.nl,+31 06 18623330,1974-11-23,33,HR Medewerker,HR,4,3153.37,Vast,24,2015-11-03,,True,160
+456,Emma,van Vliet,emma.vanvliet@degoudentarwe.nl,+31 06 73765011,1986-12-20,33,Bezorger,Logistiek,2,2395.71,Stage,24,2017-10-18,,True,
+457,Adriana,Hendriks,adriana.hendriks@degoudentarwe.nl,+31 06 93418121,1991-02-09,33,Banketbakker,Productie,4,3647.33,Tijdelijk,36,2018-02-28,,True,428
+458,Noa,de Boer,noa.deboer@degoudentarwe.nl,+31 06 87887319,2002-12-04,33,Bezorger,Logistiek,2,1826.78,Tijdelijk,40,2015-05-02,,True,
+459,Jan,van der Velden,jan.vandervelden@degoudentarwe.nl,+31 020 5826270,2004-01-19,33,Banketbakker,Productie,4,2941.34,Vast,32,2014-02-04,,True,275
+460,Finn,van Beek,finn.vanbeek@degoudentarwe.nl,+31 06 84444890,1998-12-28,33,Verkoopmedewerker,Verkoop,2,2080.81,Vast,40,2015-12-19,,True,
+461,Kees,Meijer,kees.meijer@degoudentarwe.nl,+31 030 1936606,1994-06-27,33,HR Medewerker,HR,4,3781.81,Vast,36,2014-11-20,,True,56
+462,Stijn,de Jong,stijn.dejong@degoudentarwe.nl,+31 040 8386560,1966-06-11,33,Hoofdbakker,Productie,4,3762.16,Tijdelijk,40,2015-08-15,,True,372
+463,Charlotte,Willems,charlotte.willems@degoudentarwe.nl,+31 040 1718425,2004-10-15,33,Magazijnmedewerker,Logistiek,2,1902.17,Stage,20,2015-10-27,,True,
+464,Cornelia,de Vries,cornelia.devries@degoudentarwe.nl,+31 06 83968345,1997-07-18,33,Assistent Bakker,Productie,2,1936.13,Vast,36,2014-07-18,,True,
+465,Petronella,de Graaf,petronella.degraaf@degoudentarwe.nl,+31 06 62971822,1979-08-03,33,Bezorger,Logistiek,2,2356.59,Oproep,0,2015-12-01,,True,
+466,Lotte,Molenaar,lotte.molenaar@degoudentarwe.nl,+31 010 7260742,1974-10-02,33,HR Medewerker,HR,4,3427.52,Tijdelijk,16,2014-06-22,,True,73
+467,Finn,van den Heuvel,finn.vandenheuvel@degoudentarwe.nl,+31 06 50274101,1968-09-01,33,Assistent Manager,Management,4,3222.66,Tijdelijk,36,2015-05-15,,True,159
+468,Lynn,de Jong,lynn.dejong@degoudentarwe.nl,+31 040 9751088,1965-04-06,33,Verkoopmedewerker,Verkoop,2,2177.52,Tijdelijk,32,2017-06-02,,True,
+469,Max,de Boer,max.deboer@degoudentarwe.nl,+31 06 89703441,1985-07-24,33,Filiaalmanager,Management,5,3520.66,Oproep,0,2014-04-14,,True,337
+470,Bram,de Jong,bram.dejong@degoudentarwe.nl,+31 010 5471103,1996-09-04,33,HR Medewerker,HR,4,3157.77,Tijdelijk,32,2018-07-31,,True,31
+471,Sem,Kok,sem.kok@degoudentarwe.nl,+31 06 46034259,1987-12-19,33,Regiomanager,Management,6,5321.10,Oproep,0,2017-08-21,,True,235
+472,Sem,Hendriks,sem.hendriks@degoudentarwe.nl,+31 020 8251346,2003-03-22,33,Magazijnmedewerker,Logistiek,2,2181.93,Tijdelijk,40,2017-04-04,,True,
+473,Bram,van der Meer,bram.vandermeer@degoudentarwe.nl,+31 040 9457114,1970-09-01,33,Boekhouder,Financien,4,3573.27,Vast,32,2019-05-04,,True,8
+474,Fenna,van der Linden,fenna.vanderlinden@degoudentarwe.nl,+31 06 90040866,1971-05-11,33,Bezorger,Logistiek,2,2250.21,Tijdelijk,20,2016-09-29,,True,
+475,Adriana,Dijkstra,adriana.dijkstra@degoudentarwe.nl,+31 020 7812999,2002-09-07,34,Boekhouder,Financien,4,3794.35,Tijdelijk,24,2015-11-09,,True,158
+476,Charlotte,van Dijk,charlotte.vandijk@degoudentarwe.nl,+31 020 9030846,1975-04-15,34,Verkoopmedewerker (parttime),Verkoop,1,956.05,Tijdelijk,24,2015-02-23,,True,
+477,Esther,van Vliet,esther.vanvliet@degoudentarwe.nl,+31 06 80397208,2003-04-22,34,Filiaalmanager,Management,5,4879.97,Stage,40,2018-11-17,,True,392
+478,Sanne,de Graaf,sanne.degraaf@degoudentarwe.nl,+31 06 50586696,1988-07-21,34,Banketbakker,Productie,4,3291.99,Vast,40,2014-08-25,,True,159
+479,Daan,Smit,daan.smit@degoudentarwe.nl,+31 010 3604793,1973-09-18,34,Banketbakker,Productie,4,3398.55,Stage,40,2015-03-25,,True,215
+480,Eva,Bakker,eva.bakker@degoudentarwe.nl,+31 06 46976993,1992-03-21,34,Regiomanager,Management,6,6061.46,Oproep,0,2017-06-16,,True,417
+481,Stijn,Wolters,stijn.wolters@degoudentarwe.nl,+31 040 1877527,1994-09-16,34,Bakker,Productie,3,2886.16,Vast,32,2016-01-18,,True,110
+482,Gerard,Hendriks,gerard.hendriks@degoudentarwe.nl,+31 010 5673726,1998-08-27,34,Assistent Manager,Management,4,3141.74,Tijdelijk,36,2014-03-02,,True,277
+483,Lars,Meijer,lars.meijer@degoudentarwe.nl,+31 06 48121224,1977-09-27,34,Leerling Bakker,Productie,1,1782.28,Tijdelijk,20,2014-12-02,,True,
+484,Yara,Bos,yara.bos@degoudentarwe.nl,+31 030 5696150,1983-05-06,34,Assistent Manager,Management,4,3610.67,Oproep,0,2017-04-19,,True,10
+485,Luuk,Smeets,luuk.smeets@degoudentarwe.nl,+31 040 3327094,1991-11-13,34,Schoonmaker,Facilitair,1,1797.43,Stage,40,2017-04-03,,True,
+486,Sophie,van der Velden,sophie.vandervelden@degoudentarwe.nl,+31 010 2530996,1990-01-14,34,Verkoopmedewerker,Verkoop,2,1923.83,Stage,24,2016-12-02,,True,
+487,Annemiek,Mulder,annemiek.mulder@degoudentarwe.nl,+31 020 4703979,1985-08-09,34,Banketbakker,Productie,4,3511.63,Tijdelijk,20,2015-01-31,,True,378
+488,Adriana,de Wit,adriana.dewit@degoudentarwe.nl,+31 040 7082189,1966-12-01,34,Assistent Banketbakker,Productie,2,2301.76,Vast,32,2017-12-29,,True,
+489,Femke,Jansen,femke.jansen@degoudentarwe.nl,+31 020 3528273,2000-03-24,35,Assistent Banketbakker,Productie,2,2598.67,Vast,24,2019-07-28,,True,
+490,Frans,Willems,frans.willems@degoudentarwe.nl,+31 06 64826543,1995-02-09,35,Assistent Bakker,Productie,2,2205.64,Oproep,0,2018-08-19,,True,
+491,Annemiek,Bakker,annemiek.bakker@degoudentarwe.nl,+31 030 1185092,1994-04-09,35,Hoofdbakker,Productie,4,4271.15,Vast,24,2015-07-28,,True,190
+492,Sophie,de Boer,sophie.deboer@degoudentarwe.nl,+31 020 5347476,1981-03-11,35,Assistent Bakker,Productie,2,2399.50,Tijdelijk,36,2016-03-31,,True,
+493,Yara,Groen,yara.groen@degoudentarwe.nl,+31 06 56707670,1977-08-05,35,Schoonmaker,Facilitair,1,1792.73,Stage,20,2017-04-02,,True,
+494,Lynn,Jacobs,lynn.jacobs@degoudentarwe.nl,+31 06 35429271,1993-06-16,35,Bakker,Productie,3,2758.65,Stage,40,2016-01-14,,True,152
+495,Noa,Vermeer,noa.vermeer@degoudentarwe.nl,+31 040 6282625,1976-01-28,35,Assistent Banketbakker,Productie,2,2396.42,Stage,36,2015-08-16,,True,
+496,Johanna,Mulder,johanna.mulder@degoudentarwe.nl,+31 06 56025027,1972-06-27,35,Assistent Banketbakker,Productie,2,2642.51,Tijdelijk,24,2016-12-16,,True,

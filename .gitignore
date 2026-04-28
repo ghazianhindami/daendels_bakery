@@ -1,0 +1,8 @@
+logs/
+jaffle_shop/
+dbt-env/
+bakery_daendels_data_csv/
+bakery_daendels_data_done/
+*.pyc
+__pycache__/
+data_asli/
