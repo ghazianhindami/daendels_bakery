@@ -6,6 +6,7 @@ from sqlalchemy import create_engine,text
 from typing import List
 from dotenv import load_dotenv
 import os
+from typing import Optional
 
 load_dotenv()
 
@@ -28,11 +29,26 @@ class SaleItem(BaseModel):
 class SaleRequest(BaseModel):
     payment_method: str
     branch_id: int
+    customer_id: Optional[int] = None
+    employee_id: Optional[int] = None
     items: List[SaleItem]
 
 class LoginRequest(BaseModel):
     employee_id:int
 
+@app.get("/customers")
+def get_customers():
+
+    sql="""
+    select customer_id,
+           CONCAT(first_name, ' ', last_name) AS full_name
+    from customers
+    """
+
+    with engine.connect() as conn:
+        rows = conn.execute(text(sql)).mappings().all()
+
+    return rows
 @app.get("/products")
 def get_products():
 
@@ -111,6 +127,8 @@ def create_sale(sale: SaleRequest):
                 order_datetime,
                 payment_method,
                 branch_id,
+                customer_id,
+                employee_id,
                 subtotal,
                 vat_amount,
                 total_amount
@@ -119,6 +137,8 @@ def create_sale(sale: SaleRequest):
                 CURRENT_DATE,
                 :payment_method,
                 :branch_id,
+                :customer_id,
+                :employee_id,
                 :subtotal,
                 0,
                 :grand_total
@@ -128,6 +148,8 @@ def create_sale(sale: SaleRequest):
             {
                 "payment_method": sale.payment_method,
                 "branch_id": sale.branch_id,
+                "customer_id":sale.customer_id, # hardcode for now
+                "employee_id":sale.employee_id, # hardcode for now
                 "subtotal": grand_total,
                 "grand_total": grand_total
             }

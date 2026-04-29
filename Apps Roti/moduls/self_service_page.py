@@ -1,83 +1,22 @@
-from urllib import response
-
 import streamlit as st
-import pandas as pd
 import requests
-import time
 
-st.set_page_config(page_title="Bakery Daendels",layout="centered")
+def self_service_app():
+    left, right = st.columns([3, 1])
+    with right:
+        if st.button("Logout"):
+            st.session_state.self_service=False
+            st.session_state.user=None
+            st.session_state.full_name=None
+            st.session_state.role=None
+            st.session_state.branch_id=None
+            st.session_state.branch_name=None
 
-st.title("🍞 Bakery Daendels POS")
+            st.success(
+                "Logout berhasil"
+            )
 
-if "logged_in" not in st.session_state:
-    st.session_state.logged_in=False
-
-
-def login_page():
-
-    st.title("🔐 Login Bakery POS")
-
-    id_employee = st.number_input(
-   "Employee ID",
-   min_value=1,
-   step=1,
-   format="%d"
-    )
-
-
-    if st.button("Login"):
-        with st.spinner(
-                    "Sedang Login..."
-                ):
-            payload={
-                "employee_id":id_employee
-            }
-
-            try:
-                response = requests.post(
-                    "http://localhost:8000/login",
-                    json=payload,
-                    timeout=5
-                )
-
-                if response.status_code==200:
-
-                    user=response.json()
-                    st.write(response.status_code)
-                    st.write(response.json())
-
-                    st.session_state.logged_in=True
-                    st.session_state.user=user["user_id"]
-                    st.session_state.full_name=user["username"]
-                    st.session_state.role=user["role"]
-                    st.session_state.branch_id=user["branch_id"]
-                    st.session_state.branch_name=user["branch_name"]
-
-
-                    st.success(
-                        "Login berhasil")
-                    
-                    time.sleep(2)
-                    st.rerun()
-
-                else:
-                    st.error(
-                        "Login gagal"
-                    )
-
-            except Exception as e:
-                st.error(e)
-            # st.error(
-            #     "API tidak dapat diakses"
-            # )
-
-# # -------------------------
-# # Success Message Persist
-# # -------------------------
-def main_app():
-    st.write(
-        f"Selamat datang, {st.session_state.full_name} ({st.session_state.role})"
-    )
+            st.rerun()
 
     # -------------------------
     # Session Cart
@@ -100,19 +39,37 @@ def main_app():
 
 
     @st.cache_data
+    def load_customers():
+        return requests.get(
+            "http://localhost:8000/customers",
+            timeout=30
+        ).json()
+    
+    @st.cache_data
     def load_branches():
         return requests.get(
             "http://localhost:8000/branch",
-            timeout=5
+            timeout=30
         ).json()
 
-
     products = load_products()
+    customer = load_customers()
+    branches = load_branches()
 
 
     product_map = {
         p["product_name"]: p
         for p in products
+    }
+
+    customer_map = {
+        c["customer_id"]: c
+        for c in customer
+    }
+
+    branch_map = {
+        b["branch_name"]: b
+        for b in branches
     }
 
     # -------------------------
@@ -121,9 +78,36 @@ def main_app():
 
     st.subheader("Nama Branches")
 
-    st.write(st.session_state.branch_name)
+    branches_options = list(branch_map.keys())
+    pilih_branch = st.selectbox(
+        "Pilih Branch",
+        options=branches_options
+    )
+    st.write(branch_map[pilih_branch]["branch_name"])
 
 
+    # -------------------------
+    # Customer List
+    # -------------------------
+
+    customer_options = ["Walk-in Customer"] + list(customer_map.keys())
+
+    pilih_customer = st.selectbox(
+        "Pilih Customer",
+        options=customer_options
+    )
+
+    if pilih_customer == "Walk-in Customer":
+        customer_id = None
+        pelanggan = None
+        st.write("Pelanggan walk-in")
+    else:
+        customer_id = customer_map[pilih_customer]["customer_id"]
+        pelanggan = customer_map[pilih_customer]["full_name"]
+
+        st.write(
+            f"Selamat berbelanja, {pelanggan}!"
+        )
     # -------------------------
     # Product Form
     # -------------------------
@@ -238,7 +222,9 @@ def main_app():
             payload = {
                 "payment_method": pembayaran,
                 "branch_id":
-                    st.session_state.branch_id,
+                    branch_map[pilih_branch]["branch_id"],
+                "customer_id": customer_id,
+                "employee_id": st.session_state.user,
                 "items":[
                     {
                         "product_id":
@@ -249,6 +235,8 @@ def main_app():
                     for item in st.session_state.cart
                 ]
             }
+
+            st.write(payload)
 
             try:
 
@@ -265,6 +253,8 @@ def main_app():
                 if response.status_code == 200:
 
                     result = response.json()
+
+                    st.write(result) 
 
                     st.session_state.success_msg = (
                         f"Transaksi berhasil. "
@@ -293,9 +283,3 @@ def main_app():
     if "success_msg" in st.session_state:
         st.success(st.session_state.success_msg)
         del st.session_state.success_msg
-        
-
-if st.session_state.logged_in:
-    main_app()
-else:
-    login_page()
