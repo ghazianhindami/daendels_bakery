@@ -1,3 +1,4 @@
+import random
 import streamlit as st
 import requests
 
@@ -84,6 +85,28 @@ def self_service_app():
         options=branches_options
     )
     st.write(branch_map[pilih_branch]["branch_name"])
+
+    # -------------------------
+    # Sales Channel
+    # -------------------------
+
+    order_channels = ["Auto (Random)", "Catering", "Online", "Telefoon", "Winkel"]
+    
+    selected_channel = st.selectbox(
+        "Order Channel",
+        options=order_channels
+    )
+
+    if selected_channel == "Auto (Random)":
+        final_channel = random.choices(
+        ["Online", "Winkel", "Telefoon", "Catering"],
+        weights=[0.5, 0.3, 0.15, 0.05]
+         )[0]
+    else:
+         final_channel = selected_channel
+
+
+    st.write(f"Channel Penjualan: {final_channel}")
 
 
     # -------------------------
@@ -197,9 +220,17 @@ def self_service_app():
 
                 st.rerun()
 
-        grand_total = sum(item["subtotal"] for item in st.session_state.cart)
-
-        st.metric("Grand Total", f"EUR {grand_total:.2f}")
+        grand_total_bfr_vat = sum(item["subtotal"] for item in st.session_state.cart) 
+        grand_total_vat = grand_total_bfr_vat * 0.09  # Assuming 20% VAT
+        grand_total = grand_total_bfr_vat + grand_total_vat 
+        
+        kol1, kol2, kol3 = st.columns(3)
+        with kol1:
+            st.metric("Grand Total", f"EUR {grand_total_bfr_vat:.2f}")
+        with kol2:
+            st.metric("VAT (9%)", f"EUR {grand_total_vat:.2f}")
+        with kol3:
+            st.metric("Total (incl. VAT)", f"EUR {grand_total:.2f}")
 
 
         # Payment Method
@@ -224,7 +255,8 @@ def self_service_app():
                 "branch_id":
                     branch_map[pilih_branch]["branch_id"],
                 "customer_id": customer_id,
-                "employee_id": st.session_state.user,
+                "employee_id": None,
+                "order_channel": final_channel,
                 "items":[
                     {
                         "product_id":

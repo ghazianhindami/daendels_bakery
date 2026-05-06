@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import random 
 
 def main_app():
     left, right = st.columns([3, 1])
@@ -52,8 +53,16 @@ def main_app():
             timeout=30
         ).json()    
 
+    @st.cache_data
+    def load_payments():
+        return requests.get(
+            "http://localhost:8000/payment",
+            timeout=30
+        ).json()
+    
     products = load_products()
     customer = load_customers()
+    payments = load_payments()
 
 
     product_map = {
@@ -66,6 +75,11 @@ def main_app():
         for c in customer
     }
 
+    payment_map = {
+        p["method_name"]: p
+        for p in payments
+    }
+
     # -------------------------
     # Branch
     # -------------------------
@@ -74,10 +88,34 @@ def main_app():
 
     st.write(st.session_state.branch_name)
 
+    # -------------------------
+    # Sales Channel
+    # -------------------------
+
+    order_channels = ["Auto (Random)", "Catering", "Online", "Telefoon", "Winkel"]
+    
+    selected_channel = st.selectbox(
+        "Order Channel",
+        options=order_channels
+    )
+
+    if selected_channel == "Auto (Random)":
+        final_channel = random.choices(
+        ["Online", "Winkel", "Telefoon", "Catering"],
+        weights=[0.5, 0.3, 0.15, 0.05]
+         )[0]
+    else:
+         final_channel = selected_channel
+
+
+    st.write(f"Channel Penjualan: {final_channel}")
+
 
     # -------------------------
     # Customer List
     # -------------------------
+
+    st.subheader("Informasi Customer")
 
     customer_options = ["Walk-in Customer"] + list(customer_map.keys())
 
@@ -130,23 +168,27 @@ def main_app():
 
     if st.button("Tambah ke Keranjang"):
 
-        st.session_state.cart.append({
-            "product_id":
-                product_map[produk]["product_id"],
-            "produk":
-                produk,
-            "qty":
-                qty,
-            "harga":
-                harga,
-            "subtotal":
-                subtotal
-        })
+        product_id = product_map[produk]["product_id"]
 
-        st.success(
-            "Produk ditambahkan"
-        )
+        found = False
 
+        for item in st.session_state.cart:
+            if item["product_id"] == product_id:
+                item["qty"] += qty
+                item["subtotal"] = item["qty"] * item["harga"]
+                found = True
+                break
+
+        if not found:
+            st.session_state.cart.append({
+                "product_id": product_id,
+                "produk": produk,
+                "qty": qty,
+                "harga": harga,
+                "subtotal": subtotal
+            })
+
+        st.success("Produk ditambahkan")
 
     # -------------------------
     # Cart Display
@@ -194,11 +236,7 @@ def main_app():
         # Payment Method
         pembayaran = st.selectbox(
             "Metode Pembayaran",
-            [
-                "Cash",
-                "Debit Card",
-                "Credit Card"
-            ]
+            options=list(payment_map.keys())
         )
 
 
@@ -214,6 +252,7 @@ def main_app():
                     st.session_state.branch_id,
                 "customer_id": customer_id,
                 "employee_id": st.session_state.user,
+                "order_channel": final_channel,
                 "items":[
                     {
                         "product_id":
@@ -226,7 +265,7 @@ def main_app():
             }
 
             st.write(payload)
-
+            print(payload)
             try:
 
                 with st.spinner(
@@ -252,7 +291,7 @@ def main_app():
 
                     st.session_state.cart = []
 
-                    st.rerun()
+                    # st.rerun()
 
                 else:
                     st.error(

@@ -7,6 +7,7 @@ from typing import List
 from dotenv import load_dotenv
 import os
 from typing import Optional
+from decimal import Decimal
 
 load_dotenv()
 
@@ -31,6 +32,7 @@ class SaleRequest(BaseModel):
     branch_id: int
     customer_id: Optional[int] = None
     employee_id: Optional[int] = None
+    order_channel: str
     items: List[SaleItem]
 
 class LoginRequest(BaseModel):
@@ -81,119 +83,142 @@ def get_branches():
 
 @app.post("/sales")
 def create_sale(sale: SaleRequest):
+    try:
+        with engine.begin() as conn:
 
-    with engine.begin() as conn:
+            grand_total = 0
+            line_items = []
 
-        grand_total = 0
-        line_items = []
+            channel = sale.order_channel.strip().title() if sale.order_channel else None
+            # -------------------------
+            # hitung seluruh item
+            # -------------------------
+            for item in sale.items:
 
-        # -------------------------
-        # hitung seluruh item
-        # -------------------------
-        for item in sale.items:
+                product = conn.execute(
+                    text("""
+                    select product_id,
+                        product_name,
+                        unit_price
+                    from products
+                    where product_id=:id
+                    """),
+                    {"id": item.product_id}
+                ).fetchone()
 
-            product = conn.execute(
+                price = Decimal(str(product.unit_price))
+
+                subtotal = price * item.qty
+                vat = subtotal * Decimal("0.9")
+                grand_total += subtotal
+
+                line_items.append({
+                    "product_id": item.product_id,
+                    "qty": item.qty,
+                    "price": price,
+                    "subtotal": subtotal,
+                    "grand_total": grand_total
+                })
+
+            # -------------------------
+            # INSERT sales (header)
+            # -------------------------
+
+            sale_header = conn.execute(
                 text("""
-                select product_id,
-                    product_name,
-                    unit_price
-                from products
-                where product_id=:id
-                """),
-                {"id": item.product_id}
-            ).fetchone()
-
-            price = product.unit_price
-
-            subtotal = price * item.qty
-
-            grand_total += subtotal
-
-            line_items.append({
-                "product_id": item.product_id,
-                "qty": item.qty,
-                "price": price,
-                "subtotal": subtotal,
-                "grand_total": grand_total
-            })
-
-        # -------------------------
-        # INSERT sales (header)
-        # -------------------------
-
-        sale_header = conn.execute(
-            text("""
-            insert into orders(
-                order_datetime,
-                payment_method,
-                branch_id,
-                customer_id,
-                employee_id,
-                subtotal,
-                vat_amount,
-                total_amount
-            )
-            values(
-                CURRENT_DATE,
-                :payment_method,
-                :branch_id,
-                :customer_id,
-                :employee_id,
-                :subtotal,
-                0,
-                :grand_total
-            )
-            returning order_id
-            """),
-            {
-                "payment_method": sale.payment_method,
-                "branch_id": sale.branch_id,
-                "customer_id":sale.customer_id, # hardcode for now
-                "employee_id":sale.employee_id, # hardcode for now
-                "subtotal": grand_total,
-                "grand_total": grand_total
-            }
-        ).fetchone()
-
-        order_id = sale_header[0]
-
-
-        # -------------------------
-        # INSERT sales_item (detail)
-        # -------------------------
-
-        for row in line_items:
-
-            conn.execute(
-                text("""
-                insert into order_items(
-                    order_id,
-                    product_id,
-                    quantity,
-                    unit_price,
-                    line_total
+                insert into orders(
+                    order_datetime,
+                    payment_method,
+                    branch_id,
+                    order_channel,
+                    customer_id,
+                    employee_id,
+                    subtotal,
+                    vat_amount,
+                    total_amount
                 )
                 values(
-                    :order_id,
-                    :product_id,
-                    :qty,
-                    :price,
-                    :subtotal
+                    CURRENT_TIMESTAMP,
+                    :payment_method,
+                    :branch_id,
+                    :order_channel,
+                    :customer_id,
+                    :employee_id,
+                    :subtotal,
+                    :vat_amount,
+                    :grand_total
                 )
+                returning order_id
                 """),
                 {
-                    "order_id": order_id,
-                    "product_id": row["product_id"],
-                    "qty": row["qty"],
-                    "price": row["price"],
-                    "subtotal": row["subtotal"]
+                    "payment_method": sale.payment_method,
+                    "branch_id": sale.branch_id,
+                    "order_channel": sale.order_channel.strip().title(),
+                    "customer_id":sale.customer_id,
+                    "employee_id":sale.employee_id, 
+                    "subtotal": grand_total,
+                    "vat_amount": vat,
+                    "grand_total": grand_total
                 }
-            )
+            ).fetchone()
 
-    return {
-       "message":"saved",
-       "order_id": order_id
-    }
+            print
+            order_id = sale_header[0]
+
+
+            # -------------------------
+            # INSERT sales_item (detail)
+            # -------------------------
+
+            for row in line_items:
+
+                conn.execute(
+                    text("""
+                    insert into order_items(
+                        order_id,
+                        product_id,
+                        quantity,
+                        unit_price,
+                        line_total
+                    )
+                    values(
+                        :order_id,
+                        :product_id,
+                        :qty,
+                        :price,
+                        :subtotal
+                    )
+                    """),
+                    {
+                        "order_id": order_id,
+                        "product_id": row["product_id"],
+                        "qty": row["qty"],
+                        "price": row["price"],
+                        "subtotal": row["subtotal"]
+                    }
+                )
+
+        return {
+        "message":"saved",
+        "order_id": order_id
+        }
+    except Exception as e: 
+        print("ERROR:", str(e))
+        raise
+
+@app.get("/payment")
+def get_payment_methods():
+
+    sql="""
+    select payment_id,
+           method_name
+    from m_payments
+    """
+
+    with engine.connect() as conn:
+        rows = conn.execute(text(sql)).mappings().all()
+
+    return rows
 
 @app.post("/login")
 def login(req: LoginRequest):
