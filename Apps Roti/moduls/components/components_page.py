@@ -1,10 +1,10 @@
 
-from fastapi import requests
+import requests
 import streamlit as st
 import random
 
 class pageComponents:
-    def components_order():
+    def components_order_channel():
         order_channels = ["Auto (Random)", "Catering", "Online", "Telefoon", "Winkel"]
         
         selected_channel = st.selectbox(
@@ -12,17 +12,30 @@ class pageComponents:
             options=order_channels
         )
 
-        if selected_channel == "Auto (Random)":
-            final_channel = random.choices(
-            ["Online", "Winkel", "Telefoon", "Catering"],
-            weights=[0.5, 0.3, 0.15, 0.05]
-            )[0]
-        else:
-            final_channel = selected_channel
+        # Inisialisasi
+        if "final_channel" not in st.session_state:
+            st.session_state.final_channel = None
 
-        st.write(f"Channel Penjualan: {final_channel}")
-        
-        return final_channel
+        if "last_selected_channel" not in st.session_state:
+            st.session_state.last_selected_channel = None
+
+        if selected_channel == "Auto (Random)":
+
+            # jika user BARU pindah ke Auto → generate ulang
+            if st.session_state.last_selected_channel != "Auto (Random)":
+                st.session_state.final_channel = random.choices(
+                    ["Online", "Winkel", "Telefoon", "Catering"],
+                    weights=[0.5, 0.3, 0.15, 0.05]
+                )[0]
+
+        else:
+            st.session_state.final_channel = selected_channel
+
+
+        # simpan pilihan terakhir
+        st.session_state.last_selected_channel = selected_channel
+
+        st.write(f"Channel Penjualan: {st.session_state.final_channel}")
     
         
     def components_customer(customer_map):
@@ -42,6 +55,7 @@ class pageComponents:
         else:
             customer_id = customer_map[pilih_customer]["customer_id"]
             pelanggan = customer_map[pilih_customer]["full_name"]
+
 
             st.write(
                 f"Selamat berbelanja, {pelanggan}!"
@@ -71,7 +85,7 @@ class pageComponents:
 
         # realtime update
         subtotal = harga * qty
-
+        vat = subtotal * 0.09
         st.write(
             f"Subtotal: EUR {subtotal:.2f}"
         )
@@ -87,6 +101,7 @@ class pageComponents:
                 if item["product_id"] == product_id:
                     item["qty"] += qty
                     item["subtotal"] = item["qty"] * item["harga"]
+                    item["vat"] = item["subtotal"] * 0.09
                     found = True
                     break
 
@@ -96,7 +111,8 @@ class pageComponents:
                     "produk": produk,
                     "qty": qty,
                     "harga": harga,
-                    "subtotal": subtotal
+                    "subtotal": subtotal,
+                    "vat": vat
                 })
 
             st.success("Produk ditambahkan")
@@ -156,7 +172,7 @@ class pageComponents:
             )
         return pembayaran
         
-    def components_checkout(pembayaran,final_channel,customer_id):
+    def components_checkout(pembayaran,customer_id):
         if st.button("Checkout"):
 
                 payload = {
@@ -165,7 +181,7 @@ class pageComponents:
                         st.session_state.branch_id,
                     "customer_id": customer_id,
                     "employee_id": st.session_state.user,
-                    "order_channel": final_channel,
+                    "order_channel": st.session_state.final_channel,
                     "items":[
                         {
                             "product_id":
@@ -205,13 +221,28 @@ class pageComponents:
                         st.session_state.cart = []
 
                         # st.rerun()
-
                     else:
-                        st.error(
-                            "Gagal menyimpan transaksi"
-                        )
+                        error = response.json().get("detail", "Gagal menyimpan transaksi")
+                        st.error(error)
 
                 except requests.exceptions.RequestException:
                     st.error(
                         "API tidak dapat diakses"
                     )
+
+    def components_branch(branch_map):
+        st.subheader(f"Nama Branches")
+
+        branches_options = list(branch_map.keys())
+        pilih_branch = st.selectbox(
+            "Pilih Branch",
+            options=branches_options
+        )
+
+        selected_branch = branch_map[pilih_branch]
+
+        if st.session_state.get("branch_id") != selected_branch["branch_id"]:
+            st.session_state.branch_id = selected_branch["branch_id"]
+            st.session_state.branch_name = selected_branch["branch_name"]
+
+        return pilih_branch

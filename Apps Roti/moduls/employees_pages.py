@@ -1,5 +1,6 @@
+import time as t
+
 import streamlit as st
-import requests
 
 from .components.api_service import APIService
 from .components.carts import Cart
@@ -18,13 +19,21 @@ def employee_service_app():
     header = HeaderComponent(session)
 #     cart_ui = CartComponent(cart)
 
-#     # Render header
-#     header.render()
+    st.subheader(f"Branch: {st.session_state.branch_name}")
+
+    left, right = st.columns([3,3])
+
+    with left:
+        st.subheader(
+            f"Selamat Bekerja, {st.session_state.full_name} ({st.session_state.role})"
+        )
+    # Render header
+    with right:
+        header.render()
 
 #     # # Load data
     products = api.get_products()
     customers = api.get_customers()
-    branches = api.get_branches()
     payments = api.get_payments()
 
     product_map = {
@@ -37,25 +46,30 @@ def employee_service_app():
         for c in customers
     }
 
-    branch_map = {
-        b["branch_name"]: b
-        for b in branches
-    }
-
     payment_map = {
         p["method_name"]: p
         for p in payments
     }
 #     # # UI
-    pageComponents.components_order()
-    pageComponents.components_customer(customer_map)
+    final_channel = pageComponents.components_order_channel()
+
+    customer_id = pageComponents.components_customer(customer_map)
+
     pageComponents.components_product(product_map)
+
     if len(st.session_state.cart) > 0:
         pageComponents.components_cart()
-        pageComponents.components_pembayaran(payment_map)
+        pembayaran = pageComponents.components_pembayaran(payment_map)
         pageComponents.components_checkout(pembayaran=pembayaran,final_channel=final_channel,customer_id=customer_id)
     else:
         st.info("Silahkan pilih produk terlebih dahulu untuk melakukan checkout")
 
-# employee_service_app()
+    st.write(st.session_state)
 
+    if "success_msg" in st.session_state:
+        st.success(st.session_state.success_msg)
+        del st.session_state.success_msg
+
+        t.sleep(3)  
+
+        st.rerun()
