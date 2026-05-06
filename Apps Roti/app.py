@@ -1,10 +1,11 @@
 import streamlit as st
 from moduls.login import login_page
-from moduls.main_page import main_app
-from moduls.self_service_page import self_service_app
+from moduls.employees_pages import employee_service_app
+from moduls.self_service_pages import self_service_app
+from moduls.login import login_page
 
 st.set_page_config(page_title="Bakery Daendels", layout="centered")
-st.title("🍞 Bakery Daendels POS")
+st.title("Bakery Daendels POS")
 
 
 if "self_service" not in st.session_state:
@@ -40,10 +41,12 @@ if (
 # routing
 # 
 if st.session_state.logged_in:
-    main_app()
+    employee_service_app()
 elif st.session_state.self_service:
     self_service_app()
 
 elif st.session_state.show_login:
     login_page()
+
+st.write(st.session_state)
 

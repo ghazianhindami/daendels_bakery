@@ -89,7 +89,6 @@ def create_sale(sale: SaleRequest):
             grand_total = 0
             line_items = []
 
-            channel = sale.order_channel.strip().title() if sale.order_channel else None
             # -------------------------
             # hitung seluruh item
             # -------------------------
@@ -109,8 +108,8 @@ def create_sale(sale: SaleRequest):
                 price = Decimal(str(product.unit_price))
 
                 subtotal = price * item.qty
-                vat = subtotal * Decimal("0.9")
-                grand_total += subtotal
+                vat = subtotal * Decimal("0.09")
+                grand_total += subtotal + vat
 
                 line_items.append({
                     "product_id": item.product_id,
@@ -153,10 +152,10 @@ def create_sale(sale: SaleRequest):
                 {
                     "payment_method": sale.payment_method,
                     "branch_id": sale.branch_id,
-                    "order_channel": sale.order_channel.strip().title(),
+                    "order_channel": sale.order_channel,
                     "customer_id":sale.customer_id,
                     "employee_id":sale.employee_id, 
-                    "subtotal": grand_total,
+                    "subtotal": subtotal,
                     "vat_amount": vat,
                     "grand_total": grand_total
                 }
