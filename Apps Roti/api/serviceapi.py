@@ -130,6 +130,7 @@ def create_sale(sale: SaleRequest):
                     payment_method,
                     branch_id,
                     order_channel,
+                    order_status,
                     customer_id,
                     employee_id,
                     subtotal,
@@ -141,6 +142,7 @@ def create_sale(sale: SaleRequest):
                     :payment_method,
                     :branch_id,
                     :order_channel,
+                    'In Behandeling',
                     :customer_id,
                     :employee_id,
                     :subtotal,
@@ -161,10 +163,9 @@ def create_sale(sale: SaleRequest):
                 }
             ).fetchone()
 
-            print
             order_id = sale_header[0]
 
-
+            producer 
             # -------------------------
             # INSERT sales_item (detail)
             # -------------------------
@@ -253,3 +254,53 @@ def login(req: LoginRequest):
         "branch_id": user["branch_id"],
         "branch_name": user["branch_name"]
     }
+
+
+@app.get("/orders")
+def get_orders():
+
+    with engine.connect() as conn:
+
+        rows = conn.execute(
+            text("""
+            SELECT
+                a.*
+            FROM orders a
+            LEFT JOIN branches b USING(branch_id)
+            WHERE order_status = 'In Behandeling'
+            ORDER BY order_id DESC
+            LIMIT 5
+            """)
+        ).mappings().all()
+
+    return rows
+
+@app.put("/orders/{order_id}/complete")
+def complete_order(order_id: int):
+
+    with engine.begin() as conn:
+        conn.execute(
+            text("""
+            UPDATE orders
+            SET order_status = 'Voltooid'
+            WHERE order_id = :id
+            """),
+            {"id": order_id}
+        )
+
+    return {"message": "completed"}
+
+@app.put("/orders/{order_id}/cancel")
+def cancel_order(order_id: int):
+
+    with engine.begin() as conn:
+        conn.execute(
+            text("""
+            UPDATE orders
+            SET order_status = 'Geannuleerd'
+            WHERE order_id = :id
+            """),
+            {"id": order_id}
+        )
+
+    return {"message": "cancelled"}

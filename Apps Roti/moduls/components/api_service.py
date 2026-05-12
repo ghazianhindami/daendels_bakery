@@ -23,10 +23,17 @@ class APIService:
             f"{_self.BASE_URL}/payment",
             timeout=30
         ).json()
-
+    
     def create_order(_self, payload):
         return requests.post(
             f"{_self.BASE_URL}/sales",
             json=payload,
             timeout=10
         )
+    
+    @st.cache_data(ttl=5)
+    def load_orders(_self):
+        return requests.get(
+            f"{_self.BASE_URL}/orders",
+            timeout=10
+        ).json()
