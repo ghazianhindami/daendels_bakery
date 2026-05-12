@@ -74,8 +74,6 @@ def self_service_app():
     else:
         st.info("Silahkan pilih produk terlebih dahulu untuk melakukan checkout")
 
-    st.write(st.session_state)
-
     if "success_msg" in st.session_state:
         st.success(st.session_state.success_msg)
         del st.session_state.success_msg

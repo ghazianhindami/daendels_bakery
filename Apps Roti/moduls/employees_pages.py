@@ -60,11 +60,9 @@ def employee_service_app():
     if len(st.session_state.cart) > 0:
         pageComponents.components_cart()
         pembayaran = pageComponents.components_pembayaran(payment_map)
-        pageComponents.components_checkout(pembayaran=pembayaran,final_channel=final_channel,customer_id=customer_id)
+        pageComponents.components_checkout(pembayaran=pembayaran,customer_id=customer_id)
     else:
         st.info("Silahkan pilih produk terlebih dahulu untuk melakukan checkout")
-
-    st.write(st.session_state)
 
     if "success_msg" in st.session_state:
         st.success(st.session_state.success_msg)
