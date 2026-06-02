@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: stg # Identifier name for stg sourcing purpose
+    schema: public # production: default
+    tables:
+      - name: orders
+      - name: order_items
+      - name: products
+      - name: customers
+      - name: suppliers
+      - name: cities
+      - name: branches
