@@ -32,5 +32,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   project_roti_daendels:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+      staging:
+        + schema: staging            # Staging models go to the staging schema
+      intermediate:
+        + schema: intermediate       # Intermediate models go to the intermediate schema
+      mart:
+        + schema: mart               # Mart models go to the mart schema
